@@ -1,8 +1,8 @@
 #!/bin/bash
 if which apt-get >/dev/null; then
-        sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs
+        sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git
 elif which emerge >/dev/null;then
-        sudo emerge -av vim curl python-dev python3-dev astyle ctags xdg-utils nodejs
+        sudo emerge -av vim curl python-dev python3-dev astyle ctags xdg-utils nodejs git
 fi
 sudo easy_install -ZU autopep8
 mv -f ~/.vim ~/vim_old
