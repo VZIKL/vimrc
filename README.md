@@ -3,7 +3,7 @@
 ![example.png](example.png)
 
 ###  简易安装
-**wget -qO- https://raw.github.com/VZIKL/Vimrc/master/setup.sh | sh -x**
+**wget -qO- https://raw.github.com/VZIKL/vimrc/master/setup.sh | sh -x**
 
 ####   快捷键
 1. C-i编译
