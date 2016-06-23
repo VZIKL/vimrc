@@ -15,6 +15,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "安装vim插件中" > VZIKL
 vim VZIKL -c "BundleInstall" -c "q" -c "q"
 cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
 ./install.py --all
 rm VZIKL
 echo “安装完成
