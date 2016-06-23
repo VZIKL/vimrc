@@ -253,16 +253,6 @@ Bundle 'rstacruz/sparkup'
 let g:airline_detect_whitespace=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme="tomorrow"
-let g:airline_powerline_fonts=1
-
-let g:airline_symbols = {}
-let g:airline_left_sep = "\u2b80" 
-let g:airline_left_alt_sep = "\u2b81"
-let g:airline_right_sep = "\u2b82"
-let g:airline_right_alt_sep = "\u2b83"
-let g:airline_symbols.branch = "\u2b60"
-let g:airline_symbols.readonly = "\u2b64"
-let g:airline_symbols.linenr = "\u2b61"
 
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
