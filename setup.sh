@@ -1,10 +1,10 @@
 #!/bin/bash
 if which apt-get >/dev/null; then
         sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential
-        sudo npm -g install instant-markdown-d
 elif which emerge >/dev/null;then
         sudo emerge -av vim curl python-dev python3-dev astyle ctags xdg-utils nodejs git cmake build-essential
 fi
+sudo npm -g install instant-markdown-d
 sudo easy_install -ZU autopep8
 mv -f ~/.vim ~/vim_old
 mv ~/.vimrc ~/vim_old/vimrc
