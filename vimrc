@@ -313,6 +313,7 @@ let g:tagbar_type_css = {
 \ }
 
 let g:instant_markdown_autostart = 0
+syntax on
 
 let g:solarized_termcolors=256
 set background=dark
