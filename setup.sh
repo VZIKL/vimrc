@@ -17,5 +17,6 @@ vim VZIKL -c "BundleInstall" -c "q" -c "q"
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --all
+cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
 rm VZIKL
 echo “安装完成
