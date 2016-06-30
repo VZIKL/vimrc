@@ -1,10 +1,7 @@
 #!/bin/bash
 if which apt-get >/dev/null; then
-        sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential
-elif which emerge >/dev/null;then
-        sudo emerge -av vim curl python-dev python3-dev astyle ctags xdg-utils nodejs git cmake build-essential
+        sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy
 fi
-sudo npm -g install instant-markdown-d
 sudo easy_install -ZU autopep8
 mv -f ~/.vim ~/vim_old
 mv ~/.vimrc ~/vim_old/vimrc
@@ -18,5 +15,7 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --all
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
+cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
 rm VZIKL
+sudo npm -g install instant-markdown-d
 echo “安装完成
