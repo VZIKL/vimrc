@@ -5,6 +5,7 @@
 ###  简易安装
 **wget -qO- https://raw.github.com/VZIKL/vimrc/master/setup.sh | sh -x**
 
+
 ####   快捷键
 1. C-i编译
 2. kj=ESC
@@ -17,7 +18,6 @@
 9. U=C-r
 10. C-p 查找文件
 
-* C=Ctrl
 
 ###  插件列表
 - Vundle
