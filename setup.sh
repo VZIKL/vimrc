@@ -1,8 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-if which apt-get >/dev/null; then
-        sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy
-fi
+sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy
 sudo easy_install -ZU autopep8
 mv -f ~/.vim ~/vim_old
 mv ~/.vimrc ~/vim_old/vimrc
