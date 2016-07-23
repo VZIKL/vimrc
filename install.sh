@@ -7,11 +7,14 @@ cd ~/ && git clone https://github.com/VZIKL/vimrc.git
 mv ~/vimrc/vimrc ~/.vimrc
 mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo "安装vim插件中" > VZIKL
-vim VZIKL -c "BundleInstall" -c "q" -c "q"
+cd ~/.vim/bundle/
+rm -rf YouCompleteMe/
+git clone https://github.com/Valloric/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --all
+echo "安装vim插件中" > VZIKL
+vim VZIKL -c "BundleInstall" -c "q" -c "q"
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
 cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
 rm VZIKL
