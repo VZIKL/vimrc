@@ -12,7 +12,7 @@ rm -rf YouCompleteMe/
 git clone https://github.com/Valloric/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
-./install.py --all
+./install.py --clang-completer
 echo "安装vim插件中" > VZIKL
 vim VZIKL -c "BundleInstall" -c "q" -c "q"
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
