@@ -3,7 +3,8 @@ if which apt-get >/dev/null; then
     sudo apt-get update
     sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy python-setuptools libpython2.7-dbg libpython2.7-dev libpython-dev
 elif which pacman >/dev/null; then
-    sudo pacman -S go cargo nodejs npm monodevelop base-level
+    sudo pacman -Syu
+    sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
 fi
 mv -f ~/.vim ~/vim_old
 mv ~/.vimrc ~/vim_old/vimrc
