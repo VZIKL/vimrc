@@ -14,11 +14,8 @@ git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bunle/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --clang-completer
-echo "安装vim插件中" > VZIKL
-vim VZIKL -c "BundleInstall" -c "q" -c "q"
+vim -c "BundleInstall" -c "q" -c "q"
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
 cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
-rm VZIKL
-sudo npm -g install instant-markdown-d
-cd ~
-echo “安装完成
+sudo npm -g install instant-markdown-d && cd ~
+echo 安装完成
