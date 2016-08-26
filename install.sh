@@ -8,8 +8,7 @@ elif which pacman >/dev/null; then
 fi
 mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
 cd ~ && git clone https://github.com/VZIKL/vimrc
-mv ~/vimrc/vimrc ~/.vimrc
-mv -f ~/vimrc ~/.vim
+mv ~/vimrc/vimrc ~/.vimrc && mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~/.vim/bundle/
 git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bunle/YouCompleteMe
