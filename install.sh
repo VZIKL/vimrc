@@ -13,8 +13,7 @@ mv ~/vimrc/vimrc ~/.vimrc
 mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~/.vim/bundle/
-rm -rf YouCompleteMe/
-git clone https://github.com/Valloric/YouCompleteMe
+git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bunle/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --clang-completer
