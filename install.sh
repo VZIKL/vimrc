@@ -6,9 +6,8 @@ elif which pacman >/dev/null; then
     sudo pacman -Syu
     sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
 fi
-mv -f ~/.vim ~/vim_old
-mv ~/.vimrc ~/vim_old/vimrc
-cd ~/ && git clone https://github.com/VZIKL/vimrc.git
+mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
+cd ~ && git clone https://github.com/VZIKL/vimrc
 mv ~/vimrc/vimrc ~/.vimrc
 mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -23,4 +22,5 @@ cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
 cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
 rm VZIKL
 sudo npm -g install instant-markdown-d
+cd ~
 echo “安装完成
