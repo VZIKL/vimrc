@@ -91,7 +91,7 @@ func! CompileRungcc()
             exec "!g++ % -o %<"
             exec "!time ./%<"
     elseif &filetype == 'cpp'
-            exec "!g++ % -o %< -std=c++14"
+            exec "!g++ % -o %< -std=c++11"
             exec "!time ./%<"
     elseif &filetype == 'sh'
             :!time bash %
@@ -124,10 +124,10 @@ nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 map <C-w> <C-w>w
 
 "OpenVIM NO FIle auto start NERDTree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd vimenter * Tagbar
 "InstantMarkdownPreview
-"打开新的buffer时自动定位到NerdTree
+"打开新的buffer时自动定位到主窗口
 autocmd VimEnter * wincmd p
 "Only NERDTree close vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -154,7 +154,7 @@ set scrolloff=3
 
 
 
-" 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
+" 相对行号: 行号变成相对，可以用 C-x 进行跳转
 set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
@@ -187,10 +187,10 @@ nnoremap j gj
 nnoremap gj j
 
 " 分屏窗口移动, Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 " Go to home and end using capitalized directions H and L
 noremap H ^
@@ -222,7 +222,7 @@ call vundle#rc()
 Bundle 'VundleVim/Vundle.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'wincent/command-t'
+Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/L9'
 Bundle 'scrooloose/nerdtree'
