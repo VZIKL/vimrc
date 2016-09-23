@@ -222,7 +222,7 @@ call vundle#rc()
 Bundle 'VundleVim/Vundle.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/command-t'
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/L9'
 Bundle 'scrooloose/nerdtree'
