@@ -154,7 +154,7 @@ set scrolloff=3
 
 
 
-" 相对行号: 行号变成相对，可以用 C-x 进行跳转
+" 相对行号: 行号变成相对，可以用 C-x 进行更改
 set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
@@ -315,14 +315,14 @@ let g:tagbar_type_make = {
 \}
 "CSS
 
-let g:tagbar_type_css = {
-\ 'ctagstype' : 'Css',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 's:selectors',
-        \ 'i:identities'
-    \ ]
-\ }
+"let g:tagbar_type_css = {
+"\ 'ctagstype' : 'Css',
+"    \ 'kinds'     : [
+"        \ 'c:classes',
+"        \ 's:selectors',
+"        \ 'i:identities'
+"    \ ]
+"\ }
 
 let g:instant_markdown_autostart = 0
 syntax on
