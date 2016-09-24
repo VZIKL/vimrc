@@ -255,7 +255,7 @@ let g:airline_detect_whitespace=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_theme="powerlineish"
-
+"更改airline 图标显示
 let g:airline_symbols = {}
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
