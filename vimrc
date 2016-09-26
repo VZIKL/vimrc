@@ -91,7 +91,7 @@ func! CompileRungcc()
             exec "!g++ % -o %<"
             exec "!time ./%<"
     elseif &filetype == 'cpp'
-            exec "!g++ % -o %<"
+            exec "!g++ % -o %< -std=c++11"
             exec "!time ./%<"
     elseif &filetype == 'sh'
             :!time bash %
@@ -290,6 +290,8 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:UltiSnipsSnippetDirectories=["bundle/ultiSnips"]
+let g:ycm_server_keep_logfiles=1
+let g:ycm_server_log_level = 'debug'
 
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_autofocus = 1
