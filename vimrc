@@ -315,16 +315,6 @@ let g:tagbar_type_make = {
                 \ 't:targets'
             \ ]
 \}
-"CSS
-
-let g:tagbar_type_css = {
-\ 'ctagstype' : 'Css',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 's:selectors',
-        \ 'i:identities'
-    \ ]
-\ }
 
 let g:instant_markdown_autostart = 0
 syntax on
