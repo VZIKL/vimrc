@@ -68,8 +68,7 @@ func SetTitle()
 	endif
 	if expand("%:e") == 'cpp'
 		call append(line(".")+3, "#include<iostream>")
-		call append(line(".")+4, "using namespace std;")
-		call append(line(".")+5, "")
+		call append(line(".")+4, "")
 	endif
 	if &filetype == 'c'
 		call append(line(".")+3, "#include<stdio.h>")
