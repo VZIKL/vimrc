@@ -185,12 +185,6 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" 分屏窗口移动, Smart way to move between windows
-"map <C-j> <C-W>j
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
-
 " Go to home and end using capitalized directions H and L
 noremap H ^
 noremap L $
@@ -217,7 +211,7 @@ let g:mapleader = ','
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-"Plugin 一堆插件
+"Install Plugin
 Bundle 'VundleVim/Vundle.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
