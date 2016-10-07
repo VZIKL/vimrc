@@ -23,4 +23,4 @@ cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.v
 sudo npm -g install instant-markdown-d && cd ~
 chmod +x update.sh
 echo 安装完成
-echo "如果要YCM支持python go rust等补全请cd .vim/bundle/YouCompleteMe && ./install.py -all"
+echo "如果要YCM支持python go rust等补全请cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
