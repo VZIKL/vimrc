@@ -289,6 +289,17 @@ let g:ycm_server_log_level = 'debug'
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_autofocus = 1
 
+"markdown 如果无法显示检查主目录下的.ctags文件对照https://github.com/majutsushi/tagbar/wiki#markdown自行修改
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+\ }
+
+
 let g:instant_markdown_autostart = 0
 syntax on
 
