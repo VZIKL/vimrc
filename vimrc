@@ -289,26 +289,6 @@ let g:ycm_server_log_level = 'debug'
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_autofocus = 1
 
-
-"MarkDown
-
-let g:tagbar_type_markdown = {
-    \ 'ctagstype' : 'markdown',
-    \ 'kinds' : [
-        \ 'h:Heading_L1',
-        \ 'i:Heading_L2',
-        \ 'k:Heading_L3'
-    \ ]
-\ }
-"Makefile
-
-let g:tagbar_type_make = {
-            \ 'kinds':[
-                \ 'm:macros',
-                \ 't:targets'
-            \ ]
-\}
-
 let g:instant_markdown_autostart = 0
 syntax on
 
