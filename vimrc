@@ -218,6 +218,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'wincent/command-t'
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/L9'
+"如果nerdtree目录前面图标乱码https://github.com/scrooloose/nerdtree/issues/135 最后的评论应该是可以用的
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
