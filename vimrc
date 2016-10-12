@@ -47,7 +47,6 @@ set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
-nmap tt :%s /\t/    /g<CR>
 "NEW FILE TITLE
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua exec ":call SetTitle()"
 func SetTitle()
