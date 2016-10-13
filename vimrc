@@ -156,7 +156,7 @@ set scrolloff=3
 set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
-" 插入模式下用绝对行号, 普通模式下用相对
+" 插入模式下用绝对行号, 命令模式下用相对
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
