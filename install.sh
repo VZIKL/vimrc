@@ -6,7 +6,6 @@ elif which pacman >/dev/null; then
     sudo pacman -Syu
     sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
 elif which emerge >/dev/null; then
-    sudo emerge -avuDN world
     sudo emerge -av dev-util/ctags vim net-misc/curl x11-misc/xclip dev-util/astyle x11-misc/xdg-utils net-libs/nodejs dev-vcs/git dev-util/cmake dev-python/setuptools dev-util/monodevelop dev-util/cargo
 fi
 mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
