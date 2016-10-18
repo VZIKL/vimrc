@@ -1,6 +1,4 @@
 "about vim
-"set cul
-"set cuc
 set shortmess=atI
 set et
 set lbr
