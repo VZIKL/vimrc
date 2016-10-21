@@ -85,7 +85,7 @@ func! CompileRungcc()
             exec "!g++ % -o %<"
             exec "!time ./%<"
     elseif &filetype == 'cpp'
-            exec "!g++ % -o %< -std=c++11"
+            exec "!g++ % -o %< -std=c++14"
             exec "!time ./%<"
     elseif &filetype == 'sh'
             :!time bash %
