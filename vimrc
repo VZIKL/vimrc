@@ -1,6 +1,4 @@
 "about vim
-"set cul
-"set cuc
 set shortmess=atI
 set et
 set lbr
@@ -32,10 +30,8 @@ set hlsearch
 set incsearch
 "languages
 set langmenu=zh_CN.UTF-8
-if version >= 603
-    set helplang=cn
-    set encoding=utf-8
-endif
+set helplang=cn
+set encoding=utf-8
 set cmdheight=2
 "filetype
 "
