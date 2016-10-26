@@ -1,4 +1,6 @@
 "about vim
+"set cul
+"set cuc
 set shortmess=atI
 set et
 set lbr
@@ -30,8 +32,10 @@ set hlsearch
 set incsearch
 "languages
 set langmenu=zh_CN.UTF-8
-set helplang=cn
-set encoding=utf-8
+if version >= 603
+    set helplang=cn
+    set encoding=utf-8
+endif
 set cmdheight=2
 "filetype
 "
@@ -226,7 +230,7 @@ Bundle 'vim-airline/vim-airline-themes'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'easymotion/vim-easymotion'
-Bundle 'MarcWeber/vim-addon-uw-utils'
+Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Valloric/YouCompleteMe'
@@ -237,6 +241,7 @@ Bundle 'FredKSchott/CoVim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'rstacruz/sparkup'
 Bundle 'tell-k/vim-autopep8'
