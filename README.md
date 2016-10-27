@@ -24,7 +24,7 @@
 - Vim-airline
 - Tagbar
 - Snimapte
-- CoVim
+- easymotion
 - Ctrlp
 - YouCompleteMe
 - Vim-instant-markdown
