@@ -91,7 +91,7 @@ func! CompileRungcc()
     elseif &filetype == 'sh'
             :!time bash %
     elseif &filetype=='python'
-            exec "!time python2.7 %"
+            exec "!time python %"
     elseif &filetype == 'html'
             exec "!firefox % &"
     elseif &filetype == 'go'
@@ -152,20 +152,20 @@ set scrolloff=3
 
 
 " 相对行号: 行号变成相对，可以用 C-x 进行跳转
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
+" set relativenumber number
+" au FocusLost * :set norelativenumber number
+" au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 命令模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-x> :call NumberToggle()<cr>
+" autocmd InsertEnter * :set norelativenumber number
+" autocmd InsertLeave * :set relativenumber
+" function! NumberToggle()
+  " if(&relativenumber == 1)
+    " set norelativenumber number
+  " else
+    " set relativenumber
+  " endif
+" endfunc
+" nnoremap <C-x> :call NumberToggle()<cr>
 
 " 自动定位到最后编辑的位置
 if has("autocmd")
