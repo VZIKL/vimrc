@@ -43,7 +43,7 @@ set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
-au BufRead *.qml set filetype=qml
+au BufRead,BufNewFile *.qml set filetype=qml
 "NEW FILE TITLE
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua exec ":call SetTitle()"
 func SetTitle()
