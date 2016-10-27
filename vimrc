@@ -43,6 +43,7 @@ set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+au BufRead *.qml set filetype=qml
 "NEW FILE TITLE
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua exec ":call SetTitle()"
 func SetTitle()
@@ -98,6 +99,8 @@ func! CompileRungcc()
             exec "!time go run %"
     elseif &filetype == 'lua'
             exec "!time lua %"
+    elseif &filetype == 'qml'
+            exec "!time qmlscene %"
     endif
 endfunc
 map <C-t> :call Rungdb()<CR>
@@ -241,6 +244,9 @@ Bundle 'honza/vim-snippets'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'rstacruz/sparkup'
 Bundle 'tell-k/vim-autopep8'
+Bundle 'tomasr/molokai'
+Bundle 'peterhoeg/vim-qml'
+Bundle 'Yggdroot/indentLine'
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
@@ -256,6 +262,9 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+"inentLine
+let g:indentLine_leadingSpaceEnabled = 1
 
 
 set completeopt=longest,menu
@@ -343,18 +352,17 @@ au Syntax * RainbowParenthesesLoadBraces
 
 "easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
 nmap s <Plug>(easymotion-overwin-f)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
 nmap s <Plug>(easymotion-overwin-f2)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
+" map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+"map <Leader>f <Plug>(easymotion-bd-f)
+"map <Leader>f <Plug>(easymotion-overwin-f)
 
 
 "autopep8
@@ -374,6 +382,7 @@ let g:tagbar_type_markdown = {
 let g:instant_markdown_autostart = 0
 syntax on
 
-let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme molokai
+let g:molokai_original=1
+let g:rehash256=1
