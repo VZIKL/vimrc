@@ -96,7 +96,7 @@ func! CompileRungcc()
             exec "!firefox % &"
     elseif &filetype == 'go'
             exec "!go build %<"
-            exec "!time go run %"
+            exec "!time ./%<"
     elseif &filetype == 'lua'
             exec "!time lua %"
     elseif &filetype == 'qml'
