@@ -247,6 +247,7 @@ Bundle 'tell-k/vim-autopep8'
 Bundle 'tomasr/molokai'
 Bundle 'peterhoeg/vim-qml'
 Bundle 'Yggdroot/indentLine'
+Bundle 'sukima/xmledit'
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
@@ -378,8 +379,8 @@ let g:tagbar_type_markdown = {
     \ ]
 \ }
 
-
 let g:instant_markdown_autostart = 0
+
 syntax on
 
 set background=dark
