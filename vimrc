@@ -308,19 +308,25 @@ nnoremap <Leader>y :call Yapf()<cr>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_error_symbol='>>'       " 错误行使用'>>' 标记
-let g:syntastic_warning_symbol='>'      " 警告行使用'>' 标记
+" let g:syntastic_error_symbol='>>'       " 错误行使用'>>' 标记
+" let g:syntastic_warning_symbol='>'      " 警告行使用'>' 标记
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 let g:syntastic_check_on_open=1     " 打开文件时即开启语法检查
 let g:syntastic_check_on_wq=0       " 保存时进行语法检查
 let g:syntastic_enable_highlighting=1   " 提示内容高亮显示
 " 设置Python检查规则为pyflakes和pep8
 let g:syntastic_python_checkers=['pyflakes', 'pep8']
 " 提示内容显示相关
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height = 5
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
 
 
 " NerdTree
