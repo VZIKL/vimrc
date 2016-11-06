@@ -235,7 +235,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'Valloric/ListToggle'
+" Bundle 'Valloric/ListToggle'
 Bundle 'Townk/vim-autoclose'
 Bundle 'jiangmiao/auto-pairs'
 " Bundle 'FredKSchott/CoVim'
@@ -371,14 +371,14 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" easymotion
+" Easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-overwin-f2)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
-" map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
@@ -398,7 +398,7 @@ let g:tagbar_type_markdown = {
             \ 'k:Heading_L3'
             \ ]
             \ }
-
+let g:vim_markdown_folding_disabled = 1
 let g:instant_markdown_autostart = 0
 
 
