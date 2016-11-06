@@ -6,7 +6,6 @@ set fo+=mB
 set mousemodel=popup
 set selection=inclusive
 set sw=4
-set smarttab
 set smartindent
 set sm
 set ts=4
