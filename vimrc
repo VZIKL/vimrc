@@ -109,14 +109,14 @@ func! Rungdb()
     exec "!gdb ./%<"
 endfunc
 
-" F2 AutoFormat Code
-noremap <F2> :Autoformat<CR>
+" Ctrl+h AutoFormat Code
+nnoremap <C-h> :Autoformat<CR>
 " F3 Nerd树开关
-map <F3> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 " F8 Tagbar开关
 map <F8> :TagbarToggle<CR>
 " F6 语法开关，关闭语法可以加快大文件的展示
-nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+nnoremap <F5> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 
 map <C-w> <C-w>w
@@ -282,7 +282,7 @@ let g:ycm_key_list_select_completion=['<c-n>']
 let g:ycm_key_list_previous_completion=['<c-p>']
 " let g:ycm_key_list_select_completion = ['<Down>'] 61键没有方向键
 " let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
 let g:ycm_key_list_invoke_completion=""
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -348,7 +348,8 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " rainbow pair
 let g:rbpt_colorpairs = [
