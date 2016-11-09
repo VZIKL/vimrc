@@ -1,7 +1,7 @@
 #!/bin/bash
 if which apt-get >/dev/null; then
     sudo apt-get update
-    sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy python-setuptools libpython2.7-dbg libpython2.7-dev libpython-dev monodevelop cargo mono-devel mono-xbild mono-complete
+    sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy python-setuptools libpython2.7-dbg libpython2.7-dev libpython-dev monodevelop cargo mono-devel mono-xbild mono-complete pyflakes
 elif which pacman >/dev/null; then
     sudo pacman -Syu
     sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
@@ -23,4 +23,4 @@ cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.v
 sudo npm -g install instant-markdown-d && cd ~
 chmod +x update.sh
 echo 安装完成
-echo "如果 需要YCM支持python go rust等补全请cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
+echo "如果需要YCM支持python go rust等补全请cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
