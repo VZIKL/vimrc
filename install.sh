@@ -13,14 +13,11 @@ mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
 cd ~ && git clone https://github.com/VZIKL/vimrc
 mv ~/vimrc/vimrc ~/.vimrc && mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bunle/YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe
-git submodule update --init --recursive
-./install.py --clang-completer
 vim -c "BundleInstall" -c "q" -c "q"
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
 cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
 sudo npm -g install instant-markdown-d && cd ~
 chmod +x update.sh
 echo 安装完成
-echo "如果需要YCM支持python go rust等补全请cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
+echo "编译ycm cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
+echo "./install.py --clang-completer"
