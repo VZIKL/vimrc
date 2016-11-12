@@ -11,6 +11,8 @@ fi
 sudo pip install yapf
 mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
 cd ~ && git clone https://github.com/VZIKL/vimrc
+git clone https://github.com/powerline/fonts
+cd fonts && sudo ./install.sh
 mv ~/vimrc/vimrc ~/.vimrc && mv -f ~/vimrc ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
