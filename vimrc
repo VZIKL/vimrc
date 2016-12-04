@@ -252,6 +252,8 @@ Bundle 'sukima/xmledit'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'mindriot101/vim-yapf'
 " Bundle 'rhysd/vim-clang-format'
+if v:version >= 800
+endif
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
