@@ -32,11 +32,68 @@ set langmenu=zh_CN.UTF-8
 set helplang=cn
 set encoding=utf-8
 set cmdheight=2
+set autoread
+set autowrite
+set magic
+set guioptions-=T
+set guioptions-=m
+set noeb
+set confirm
+set nobackup
+set noswapfile
+set ignorecase
+set linespace=0
+set backspace=2
+set whichwrap+=<,>,h,l
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+set report=0
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+set matchtime=1
+set scrolloff=3
+
 " filetype
 "
 filetype on
 filetype plugin on
 filetype plugin indent on
+if v:version >=800
+    packadd L9
+"    packadd YouCompleteMe
+    packadd auto-pairs
+    packadd command-t
+    packadd ctrlp.vim
+    packadd emmet-vim
+    packadd indentLine
+    packadd molokai
+    ru .vim/pack/plugin/opt/nerdcommenter/plugin/NERD_commenter.vim
+    packadd nerdtree
+    packadd rainbow_parentheses.vim
+    packadd sparkup
+    packadd supertab
+    packadd syntastic
+    packadd tabular
+    packadd tagbar
+    packadd tlib_vim
+    packadd ultisnips
+    packadd vim-addon-mw-utils
+    packadd vim-airline
+    packadd vim-airline-themes
+    packadd vim-autoclose
+    packadd vim-autoformat
+    packadd vim-easymotion
+    packadd vim-fugitive
+    packadd vim-instant-markdown
+    packadd vim-markdown
+    packadd vim-qml
+    packadd vim-snipmate
+    packadd vim-snippets
+    packadd vim-surround
+    packadd vim-yapf
+    packadd vimproc.vim
+    packadd xmledit 
+endif
 
 set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
@@ -77,6 +134,7 @@ func SetTitle()
 endfunc
 autocmd BufNewFile * normal G
 
+
 " Keyboard command
 map <C-i> :call CompileRungcc()<CR>
 func! CompileRungcc()
@@ -112,7 +170,7 @@ endfunc
 " Ctrl+h AutoFormat Code
 nnoremap <C-h> :Autoformat<CR>
 " F3 Nerd树开关
-map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 " F8 Tagbar开关
 map <F8> :TagbarToggle<CR>
 " F6 语法开关，关闭语法可以加快大文件的展示
@@ -129,27 +187,6 @@ autocmd vimenter * Tagbar
 autocmd VimEnter * wincmd p
 " Only NERDTree close vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-set autoread
-set autowrite
-set magic
-set guioptions-=T
-set guioptions-=m
-set noeb
-set confirm
-set nobackup
-set noswapfile
-set ignorecase
-set linespace=0
-set backspace=2
-set whichwrap+=<,>,h,l
-set mouse=a
-set selection=exclusive
-set selectmode=mouse,key
-set report=0
-set fillchars=vert:\ ,stl:\ ,stlnc:\
-set matchtime=1
-set scrolloff=3
-
 
 
 " 相对行号: 行号变成相对，可以用 C-x 进行跳转
@@ -207,52 +244,53 @@ nnoremap U <C-r>
 let mapleader = ','
 let g:mapleader = ','
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
 
 " Install Plugin
-Bundle 'VundleVim/Vundle.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'wincent/command-t'
-Bundle 'mattn/emmet-vim'
-Bundle 'vim-scripts/L9'
-" 如果nerdtree目录前面图标乱码https://github.com/scrooloose/nerdtree/issues/135 最后的评论应该是可以用的
-Bundle 'scrooloose/nerdtree'
-" Bundle 'altercation/vim-colors-solarized'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'Valloric/YouCompleteMe'
-" Bundle 'Valloric/ListToggle'
-Bundle 'Townk/vim-autoclose'
-Bundle 'jiangmiao/auto-pairs'
-" Bundle 'FredKSchott/CoVim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'suan/vim-instant-markdown'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'rstacruz/sparkup'
-" Bundle 'tell-k/vim-autopep8'
-Bundle 'tomasr/molokai'
-Bundle 'peterhoeg/vim-qml'
-Bundle 'Yggdroot/indentLine'
-Bundle 'sukima/xmledit'
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'mindriot101/vim-yapf'
-" Bundle 'rhysd/vim-clang-format'
-if v:version >= 800
+
+if v:version < 800
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#rc()
+    Bundle 'VundleVim/Vundle.vim'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'tpope/vim-surround'
+    Bundle 'wincent/command-t'
+    Bundle 'mattn/emmet-vim'
+    Bundle 'vim-scripts/L9'
+    " 如果nerdtree目录前面图标乱码https://github.com/scrooloose/nerdtree/issues/135 最后的评论应该是可以用的
+    Bundle 'scrooloose/nerdtree'
+    " Bundle 'altercation/vim-colors-solarized'
+    Bundle 'ervandew/supertab'
+    Bundle 'scrooloose/syntastic'
+    Bundle 'scrooloose/nerdcommenter'
+    Bundle 'godlygeek/tabular'
+    Bundle 'majutsushi/tagbar'
+    Bundle 'vim-airline/vim-airline'
+    Bundle 'vim-airline/vim-airline-themes'
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'kien/rainbow_parentheses.vim'
+    Bundle 'easymotion/vim-easymotion'
+    Bundle 'MarcWeber/vim-addon-mw-utils'
+    Bundle 'tomtom/tlib_vim'
+    Bundle 'garbas/vim-snipmate'
+    Bundle 'Valloric/YouCompleteMe'
+    " Bundle 'Valloric/ListToggle'
+    Bundle 'Townk/vim-autoclose'
+    Bundle 'jiangmiao/auto-pairs'
+    " Bundle 'FredKSchott/CoVim'
+    Bundle 'plasticboy/vim-markdown'
+    Bundle 'suan/vim-instant-markdown'
+    Bundle 'SirVer/ultisnips'
+    Bundle 'honza/vim-snippets'
+    Bundle 'Shougo/vimproc.vim'
+    Bundle 'rstacruz/sparkup'
+    " Bundle 'tell-k/vim-autopep8'
+    Bundle 'tomasr/molokai'
+    Bundle 'peterhoeg/vim-qml'
+    Bundle 'Yggdroot/indentLine'
+    Bundle 'sukima/xmledit'
+    Bundle 'Chiel92/vim-autoformat'
+    Bundle 'mindriot101/vim-yapf'
+    " Bundle 'rhysd/vim-clang-format'
 endif
 
 let g:airline_powerline_fonts = 1
@@ -261,7 +299,9 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_theme="powerlineish"
 
-let g:airline_symbols = {}
+if v:version <800
+    let g:airline_symbols = {}
+endif
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -280,9 +320,11 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中
 inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
+
+let g:ycm_server_python_interpreter = '/usr/lib/python-exec/python3.5/python'
 let g:ycm_key_list_select_completion=['<c-n>']
 let g:ycm_key_list_previous_completion=['<c-p>']
-" let g:ycm_key_list_select_completion = ['<Down>'] 61键没有方向键
+" let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
 " let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
 let g:ycm_key_list_invoke_completion=""
@@ -333,25 +375,28 @@ let g:syntastic_loc_list_height = 5
 
 " NerdTree
 let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
-
-
-" nerdcommenter
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-" Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+
+
+"nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" " Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+"" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+" let g:NERDAltDelims_java = 1
+" " Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  }
+"" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
 
 " rainbow pair
 let g:rbpt_colorpairs = [
