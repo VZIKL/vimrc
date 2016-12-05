@@ -58,42 +58,6 @@ set scrolloff=3
 filetype on
 filetype plugin on
 filetype plugin indent on
-if v:version >=800
-    packadd L9
-"    packadd YouCompleteMe
-    packadd auto-pairs
-    packadd command-t
-    packadd ctrlp.vim
-    packadd emmet-vim
-    packadd indentLine
-    packadd molokai
-    ru .vim/pack/plugin/opt/nerdcommenter/plugin/NERD_commenter.vim
-    packadd nerdtree
-    packadd rainbow_parentheses.vim
-    packadd sparkup
-    packadd supertab
-    packadd syntastic
-    packadd tabular
-    packadd tagbar
-    packadd tlib_vim
-    packadd ultisnips
-    packadd vim-addon-mw-utils
-    packadd vim-airline
-    packadd vim-airline-themes
-    packadd vim-autoclose
-    packadd vim-autoformat
-    packadd vim-easymotion
-    packadd vim-fugitive
-    packadd vim-instant-markdown
-    packadd vim-markdown
-    packadd vim-qml
-    packadd vim-snipmate
-    packadd vim-snippets
-    packadd vim-surround
-    packadd vim-yapf
-    packadd vimproc.vim
-    packadd xmledit 
-endif
 
 set viminfo+=!
 set iskeyword+=_,$,@,%,#,-
@@ -246,14 +210,47 @@ let g:mapleader = ','
 
 
 " Install Plugin
-
+if v:version >=800
+    packadd L9
+    packadd YouCompleteMe
+    packadd auto-pairs
+    packadd ctrlp.vim
+    packadd molokai
+    packadd nerdtree
+    ru .vim/pack/plugin/opt/nerdcommenter/plugin/NERD_commenter.vim
+    packadd indentLine
+    packadd rainbow_parentheses.vim
+    packadd supertab
+    packadd syntastic
+    packadd tagbar
+    packadd vim-airline
+    packadd vim-airline-themes
+    packadd tabular
+    packadd tlib_vim
+    packadd ultisnips
+    packadd vim-addon-mw-utils
+    packadd vim-autoclose
+    packadd vim-autoformat
+    packadd vim-easymotion
+    packadd vim-fugitive
+    packadd vim-snipmate
+    packadd vim-snippets
+    packadd vim-surround
+    packadd vimproc.vim
+    packadd emmet-vim
+    packadd sparkup
+    packadd vim-instant-markdown
+    packadd vim-markdown
+    packadd vim-qml
+    packadd vim-yapf
+    packadd xmledit 
+endif
 if v:version < 800
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#rc()
     Bundle 'VundleVim/Vundle.vim'
     Bundle 'tpope/vim-fugitive'
     Bundle 'tpope/vim-surround'
-    Bundle 'wincent/command-t'
     Bundle 'mattn/emmet-vim'
     Bundle 'vim-scripts/L9'
     " 如果nerdtree目录前面图标乱码https://github.com/scrooloose/nerdtree/issues/135 最后的评论应该是可以用的
@@ -321,24 +318,24 @@ inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 
-let g:ycm_server_python_interpreter = '/usr/lib/python-exec/python3.5/python'
-let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_previous_completion=['<c-p>']
-" let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
-" let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
-let g:ycm_key_list_invoke_completion=""
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_min_num_of_chars_for_completion=2
-let g:ycm_cache_omnifunc=0
-let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:UltiSnipsSnippetDirectories=["bundle/ultiSnips"]
-let g:ycm_server_keep_logfiles=1
-let g:ycm_server_log_level = 'debug'
+" let g:ycm_server_python_interpreter = '/usr/lib/python-exec/python3.5/python'
+" let g:ycm_key_list_select_completion=['<c-n>']
+" let g:ycm_key_list_previous_completion=['<c-p>']
+" " let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
+" " let g:ycm_key_list_previous_completion = ['<Up>']
+" let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
+" let g:ycm_key_list_invoke_completion=""
+" let g:ycm_confirm_extra_conf=0
+" let g:ycm_collect_identifiers_from_tags_files=1
+" let g:ycm_min_num_of_chars_for_completion=2
+" let g:ycm_cache_omnifunc=0
+" let g:ycm_seed_identifiers_with_syntax=1
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_complete_in_strings = 1
+" let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" let g:UltiSnipsSnippetDirectories=["bundle/ultiSnips"]
+" let g:ycm_server_keep_logfiles=1
+" let g:ycm_server_log_level = 'debug'
 
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_autofocus = 1
