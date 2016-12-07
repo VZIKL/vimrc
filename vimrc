@@ -244,6 +244,11 @@ if v:version >=800
     packadd vim-qml
     packadd vim-yapf
     packadd xmledit 
+    packadd vim-coloresque
+    packadd vim-closetag
+    packadd MatchTagAlways
+    packadd vim-jsbeautify
+    packadd gundo.vim
 endif
 if v:version < 800
     set rtp+=~/.vim/bundle/Vundle.vim
@@ -287,6 +292,11 @@ if v:version < 800
     Bundle 'sukima/xmledit'
     Bundle 'Chiel92/vim-autoformat'
     Bundle 'mindriot101/vim-yapf'
+    Bundle 'gorodinskiy/vim-coloresque'
+    Bundle 'alvan/vim-closetag'
+    Bundle 'Valloric/MatchTagAlways'
+    Bundle 'maksimr/vim-jsbeautify'
+    Bundle 'sjl/gundo.vim'
     " Bundle 'rhysd/vim-clang-format'
 endif
 
@@ -323,6 +333,11 @@ inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 " let g:ycm_key_list_previous_completion=['<c-p>']
 " let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
 " let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_semantic_triggers = {
+    \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
+    \   'scss,css': [ 're!^\s{2,4}', 're!:\s+'  ],
+    \   'html': [ '</' ],
+    \ }
 let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
 " let g:ycm_key_list_invoke_completion=""
 " let g:ycm_confirm_extra_conf=0
@@ -450,6 +465,11 @@ let g:tagbar_type_markdown = {
             \ }
 let g:vim_markdown_folding_disabled = 1
 let g:instant_markdown_autostart = 0
+
+
+"css-color
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 
 
 syntax on
