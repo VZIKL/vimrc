@@ -20,7 +20,6 @@ if [vim_info >=8.0];then
     mkdir ~/.vim/pack/plugin
     cd ~/.vim/pack/plugin
     git clone https://github.com/vim-scripts/L9
-    git clone https://github.com/Valloric/YouCompleteMe
     git clone https://github.com/jiangmiao/auto-pairs
     git clone https://github.com/kien/ctrlp.vim
     git clone https://github.com/tomasr/molokai
@@ -50,8 +49,8 @@ if [vim_info >=8.0];then
     git clone https://github.com/peterhoeg/vim-qml
     git clone https://github.com/mindriot101/vim-yapf
     git clone https://github.com/sukima/xmledit
+    git clone --recursive https://github.com/Valloric/YouCompleteMe
     cd ~/.vim/pack/plugin/opt/YouCompleteMe
-    git submodule update --init --recursive
     ./install.py --clang-completer
     cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/pack/plugin/opt/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
@@ -60,9 +59,8 @@ if [vim_info >=8.0];then
 else
     mkdir ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
+    git clone --recursive https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
     cd ~/.vim/bundle/YouCompleteMe
-    git submodule update --init --recursive
     ./install.py --clang-completer
     vim -c "BundleInstall" -c "q" -c "q"
     cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
