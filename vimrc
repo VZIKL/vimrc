@@ -348,10 +348,10 @@ let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
 " let g:ycm_complete_in_comments = 1
 " let g:ycm_complete_in_strings = 1
 " let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" let g:UltiSnipsSnippetDirectories=["bundle/ultiSnips"]
 " let g:ycm_server_keep_logfiles=1
 " let g:ycm_server_log_level = 'debug'
 
+"tagbar
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_autofocus = 1
 
@@ -359,6 +359,12 @@ let g:tagbar_autofocus = 1
 scriptencoding utf-8
 let g:yapf_style = "google"
 nnoremap <Leader>y :call Yapf()<cr>
+
+"ultisnips
+let g:UltiSnipsExpandTrigger="<c-c>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -465,11 +471,6 @@ let g:tagbar_type_markdown = {
             \ }
 let g:vim_markdown_folding_disabled = 1
 let g:instant_markdown_autostart = 0
-
-
-"css-color
-let g:cssColorVimDoNotMessMyUpdatetime = 1
-
 
 
 syntax on

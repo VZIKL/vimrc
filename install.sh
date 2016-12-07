@@ -61,6 +61,7 @@ if [vim_info >=8.0];then
     ./install.py --clang-completer
     cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/pack/plugin/opt/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
+    cp -a ~/.vim/pack/plugin/opt/vim-snippets/snippets ~/.vim
     sudo npm -g install instant-markdown-d && cd ~
     sudo npm -g install js-beautify
     sudo npm -g install jshint
@@ -75,6 +76,7 @@ else
     vim -c "BundleInstall" -c "q" -c "q"
     cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
+    cp -a ~/.vim/bundle/vim-snippets/snippets ~/.vim
     sudo npm -g install instant-markdown-d && cd ~
     sudo npm -g install js-beautify
     sudo npm -g install jshint
