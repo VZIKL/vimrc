@@ -114,7 +114,7 @@ func! CompileRungcc()
     elseif &filetype=='python'
         exec "!time python %"
     elseif &filetype == 'html'
-        exec "!firefox % &"
+        exec "!google-chrome-unstable % &"
     elseif &filetype == 'go'
         exec "!go build %<"
         exec "!time ./%<"
