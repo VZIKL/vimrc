@@ -49,12 +49,22 @@ if [vim_info >=8.0];then
     git clone https://github.com/peterhoeg/vim-qml
     git clone https://github.com/mindriot101/vim-yapf
     git clone https://github.com/sukima/xmledit
+    git clone https://github.com/alvan/vim-closetag
+    git clone https://github.com/gorodinskiy/vim-coloresque
+    git clone https://github.com/Valloric/MatchTagAlways
+    git clone https://github.com/ternjs/tern_for_vim
+    git clone https://github.com/Chiel92/vim-autoformat
+    git clone https://github.com/maksimr/vim-jsbeautify
+    git clone https://github.com/sjl/gundo.vim
     git clone --recursive https://github.com/Valloric/YouCompleteMe
     cd ~/.vim/pack/plugin/opt/YouCompleteMe
     ./install.py --clang-completer
     cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/pack/plugin/opt/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
     sudo npm -g install instant-markdown-d && cd ~
+    sudo npm -g install js-beautify
+    sudo npm -g install jshint
+    sudo npm -g install csslint
     clang-format  -style=google -dump-config > .clang-format
 else
     mkdir ~/.vim/bundle
@@ -66,6 +76,9 @@ else
     cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
     sudo npm -g install instant-markdown-d && cd ~
+    sudo npm -g install js-beautify
+    sudo npm -g install jshint
+    sudo npm -g install csslint
     clang-format  -style=google -dump-config > .clang-format
     chmod +x update.sh
     echo 安装完成
