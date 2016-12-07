@@ -217,7 +217,7 @@ if v:version >=800
     packadd ctrlp.vim
     packadd molokai
     packadd nerdtree
-    ru .vim/pack/plugin/opt/nerdcommenter/plugin/NERD_commenter.vim
+    packadd nerdcommenter
     packadd indentLine
     packadd rainbow_parentheses.vim
     packadd supertab
@@ -321,9 +321,9 @@ inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 " let g:ycm_server_python_interpreter = '/usr/lib/python-exec/python3.5/python'
 " let g:ycm_key_list_select_completion=['<c-n>']
 " let g:ycm_key_list_previous_completion=['<c-p>']
-" " let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
-" " let g:ycm_key_list_previous_completion = ['<Up>']
-" let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
+" let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
+" let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
 " let g:ycm_key_list_invoke_completion=""
 " let g:ycm_confirm_extra_conf=0
 " let g:ycm_collect_identifiers_from_tags_files=1
