@@ -15,12 +15,13 @@
 6. F6关闭,打开文件高亮
 7. C-w 切换窗口
 8. C-p 查找文件
-9. Leader=,
-10. ,+j/k/h/l 运行easymotion-j/k/h/l
+9. ,+j/k/h/l 运行easymotion-j/k/h/l
 
 
 ###  插件列表
 - NerdTree
+- nerdcommenter
+- indentline
 - Vim-airline
 - vim-easymotion
 - Tagbar
