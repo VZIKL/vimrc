@@ -249,6 +249,8 @@ if v:version >=800
     packadd MatchTagAlways
     packadd vim-jsbeautify
     packadd gundo.vim
+    packadd tern_for_vim
+    packadd vim-multiple-cursors
 endif
 if v:version < 800
     set rtp+=~/.vim/bundle/Vundle.vim
@@ -297,6 +299,8 @@ if v:version < 800
     Bundle 'Valloric/MatchTagAlways'
     Bundle 'maksimr/vim-jsbeautify'
     Bundle 'sjl/gundo.vim'
+    Bundle 'ternjs/tern_for_vim'
+    Bundle 'terryma/vim-multiple-cursors'
     " Bundle 'rhysd/vim-clang-format'
 endif
 
@@ -329,27 +333,27 @@ inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 
 " let g:ycm_server_python_interpreter = '/usr/lib/python-exec/python3.5/python'
-" let g:ycm_key_list_select_completion=['<c-n>']
-" let g:ycm_key_list_previous_completion=['<c-p>']
 " let g:ycm_key_list_select_completion = ['<Down>'] 61键盘没有方向键
 " let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_key_list_select_completion=['<c-n>']
+let g:ycm_key_list_previous_completion=['<c-p>']
 let g:ycm_semantic_triggers = {
     \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
     \   'scss,css': [ 're!^\s{2,4}', 're!:\s+'  ],
     \   'html': [ '</' ],
     \ }
 let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
-" let g:ycm_key_list_invoke_completion=""
-" let g:ycm_confirm_extra_conf=0
-" let g:ycm_collect_identifiers_from_tags_files=1
-" let g:ycm_min_num_of_chars_for_completion=2
-" let g:ycm_cache_omnifunc=0
-" let g:ycm_seed_identifiers_with_syntax=1
-" let g:ycm_complete_in_comments = 1
-" let g:ycm_complete_in_strings = 1
-" let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" let g:ycm_server_keep_logfiles=1
-" let g:ycm_server_log_level = 'debug'
+let g:ycm_key_list_invoke_completion=""
+let g:ycm_confirm_extra_conf=0
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_cache_omnifunc=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:ycm_server_keep_logfiles=1
+let g:ycm_server_log_level = 'debug'
 
 "tagbar
 let g:tagbar_ctags_bin='/usr/bin/ctags'
@@ -373,8 +377,8 @@ set statusline+=%*
 " let g:syntastic_error_symbol='>>'       " 错误行使用'>>' 标记
 " let g:syntastic_warning_symbol='>'      " 警告行使用'>' 标记
 let g:syntastic_error_symbol = '✖'
-let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_style_warning_symbol = '💩'
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
@@ -397,8 +401,6 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-
-
 "nerdcommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -415,6 +417,12 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
+"vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 " rainbow pair
 let g:rbpt_colorpairs = [
@@ -471,7 +479,6 @@ let g:tagbar_type_markdown = {
             \ }
 let g:vim_markdown_folding_disabled = 1
 let g:instant_markdown_autostart = 0
-
 
 syntax on
 
