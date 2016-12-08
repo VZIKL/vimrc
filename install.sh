@@ -1,12 +1,12 @@
 #!/bin/bash
 if which apt-get >/dev/null; then
     sudo apt-get update
-    sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy python-setuptools libpython2.7-dbg libpython2.7-dev libpython-dev monodevelop cargo mono-devel mono-xbuild mono-complete pyflakes clang-format
+    sudo apt-get install vim ctags curl python-dev python3-dev xclip astyle xdg-utils nodejs git cmake build-essential nodejs-legacy python-setuptools libpython2.7-dbg libpython2.7-dev libpython-dev monodevelop cargo mono-devel mono-xbuild mono-complete pyflakes clang-format pep8
 elif which pacman >/dev/null; then
     sudo pacman -Syu
     sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
 elif which emerge >/dev/null; then
-    sudo emerge -av dev-util/ctags vim net-misc/curl x11-misc/xclip dev-util/astyle x11-misc/xdg-utils net-libs/nodejs dev-vcs/git dev-util/cmake dev-python/setuptools dev-util/monodevelop dev-util/cargo pyflakes dev-python/pip clang llvm
+    sudo emerge -av dev-util/ctags vim net-misc/curl x11-misc/xclip dev-util/astyle x11-misc/xdg-utils net-libs/nodejs dev-vcs/git dev-util/cmake dev-python/setuptools dev-util/monodevelop dev-util/cargo pyflakes dev-python/pip clang llvm dev-python/pep8
 fi
 vim_info=$(vim --version|head -1|cut -d ' ' -f 5)
 sudo pip install yapf
@@ -56,12 +56,15 @@ if [vim_info >=8.0];then
     git clone https://github.com/Chiel92/vim-autoformat
     git clone https://github.com/maksimr/vim-jsbeautify
     git clone https://github.com/sjl/gundo.vim
+    git clone https://github.com/ternjs/tern_for_vim
+    git clone https://github.com/terryma/vim-multiple-cursors
     git clone --recursive https://github.com/Valloric/YouCompleteMe
     cd ~/.vim/pack/plugin/opt/YouCompleteMe
     ./install.py --clang-completer
     cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/pack/plugin/opt/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
-    cp -a ~/.vim/pack/plugin/opt/vim-snippets/snippets ~/.vim
+    cd ~/.vim/pack/plugin/opt/tern_for_vim
+    sudo npm install -g
     sudo npm -g install instant-markdown-d && cd ~
     sudo npm -g install js-beautify
     sudo npm -g install jshint
@@ -76,7 +79,8 @@ else
     vim -c "BundleInstall" -c "q" -c "q"
     cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/bundle/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
-    cp -a ~/.vim/bundle/vim-snippets/snippets ~/.vim
+    cd ~/.vim/pack/plugin/opt/tern_for_vim
+    sudo npm install -g
     sudo npm -g install instant-markdown-d && cd ~
     sudo npm -g install js-beautify
     sudo npm -g install jshint
