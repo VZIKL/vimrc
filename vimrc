@@ -243,7 +243,7 @@ if v:version >=800
     packadd vim-markdown
     packadd vim-qml
     packadd vim-yapf
-    packadd xmledit 
+    packadd xmledit
     packadd vim-coloresque
     packadd vim-closetag
     packadd MatchTagAlways
@@ -339,7 +339,7 @@ let g:ycm_key_list_select_completion=['<c-n>']
 let g:ycm_key_list_previous_completion=['<c-p>']
 let g:ycm_semantic_triggers = {
     \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
-    \   'scss,css': [ 're!^\s{2,4}', 're!:\s+'  ],
+    \   'css': [ 're!^\s{2,4}', 're!:\s+'  ],
     \   'html': [ '</' ],
     \ }
 let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
@@ -376,10 +376,12 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 " let g:syntastic_error_symbol='>>'       " 错误行使用'>>' 标记
 " let g:syntastic_warning_symbol='>'      " 警告行使用'>' 标记
-let g:syntastic_error_symbol = '✖'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_style_warning_symbol = '💩'
+" let g:syntastic_error_symbol = '✖'
+" let g:syntastic_warning_symbol = '⚠️'
+" let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "<img draggable="false" class="emoji" alt="⚠
+ src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/26a0.svg">"
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
