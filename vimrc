@@ -246,7 +246,7 @@ if v:version >=800
     packadd xmledit
     packadd vim-coloresque
     packadd vim-closetag
-    packadd MatchTagAlways
+    " packadd MatchTagAlways
     packadd vim-jsbeautify
     packadd gundo.vim
     packadd tern_for_vim
@@ -296,7 +296,7 @@ if v:version < 800
     Bundle 'mindriot101/vim-yapf'
     Bundle 'gorodinskiy/vim-coloresque'
     Bundle 'alvan/vim-closetag'
-    Bundle 'Valloric/MatchTagAlways'
+    " Bundle 'Valloric/MatchTagAlways'
     Bundle 'maksimr/vim-jsbeautify'
     Bundle 'sjl/gundo.vim'
     Bundle 'ternjs/tern_for_vim'
@@ -342,7 +342,7 @@ let g:ycm_semantic_triggers = {
     \   'css': [ 're!^\s{2,4}', 're!:\s+'  ],
     \   'html': [ '</' ],
     \ }
-let g:ycm_global_ycm_extra_conf = '/home/vzikl/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_key_list_invoke_completion=""
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -354,6 +354,8 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level = 'debug'
+let g:ycm_show_diagnostics_ui = 0
+
 
 "tagbar
 let g:tagbar_ctags_bin='/usr/bin/ctags'
@@ -366,8 +368,6 @@ nnoremap <Leader>y :call Yapf()<cr>
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<c-c>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " syntastic
@@ -379,8 +379,11 @@ set statusline+=%*
 " let g:syntastic_error_symbol = '✖'
 " let g:syntastic_warning_symbol = '⚠️'
 " let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_error_symbol = "✗"
+" let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_error_symbol = "☠"
 let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_style_error_symbol = "☢"
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
@@ -388,8 +391,14 @@ highlight link SyntasticStyleWarningSign SignColumn
 let g:syntastic_check_on_open=1     " 打开文件时即开启语法检查
 let g:syntastic_check_on_wq=0       " 保存时进行语法检查
 let g:syntastic_enable_highlighting=1   " 提示内容高亮显示
-" 设置Python检查规则为pyflakes和pep8
+
 let g:syntastic_python_checkers=['pyflakes', 'pep8']
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_cpp_compiler = 'gcc'
+let g:syntastic_cpp_compiler_options = '-std=c++14'
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
+
 " 提示内容显示相关
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
