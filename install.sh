@@ -6,7 +6,7 @@ elif which pacman >/dev/null; then
     sudo pacman -Syu
     sudo pacman -S go cargo nodejs npm monodevelop base-level python2 python
 elif which emerge >/dev/null; then
-    sudo emerge -av dev-util/ctags vim net-misc/curl x11-misc/xclip dev-util/astyle x11-misc/xdg-utils net-libs/nodejs dev-vcs/git dev-util/cmake dev-python/setuptools dev-util/monodevelop dev-util/cargo pyflakes dev-python/pip clang llvm dev-python/pep8
+    sudo emerge -av dev-util/ctags vim net-misc/curl x11-misc/xclip dev-util/astyle x11-misc/xdg-utils net-libs/nodejs dev-vcs/git dev-util/cmake dev-python/setuptools dev-util/monodevelop dev-util/cargo pyflakes dev-python/pip clang llvm dev-python/pep8 jedi
 fi
 vim_info=$(vim --version|head -1|cut -d ' ' -f 5)
 sudo pip install yapf
