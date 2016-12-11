@@ -380,8 +380,7 @@ set statusline+=%*
 " let g:syntastic_warning_symbol = '⚠️'
 " let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "<img draggable="false" class="emoji" alt="⚠
- src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/26a0.svg">"
+let g:syntastic_warning_symbol = "⚠"
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
