@@ -14,6 +14,7 @@ mv -f ~/.vim ~/vim_old && mv ~/.vimrc ~/vim_old/vimrc
 cd ~ && git clone https://github.com/VZIKL/vimrc
 git clone https://github.com/powerline/fonts
 cd fonts && sudo ./install.sh
+mv ~/vimrc/tern-config ~/.tern-config
 mv ~/vimrc/vimrc ~/.vimrc && mv -f ~/vimrc ~/.vim
 if [vim_info >=8.0];then
     mkdir ~/.vim/pack
