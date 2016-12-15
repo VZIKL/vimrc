@@ -118,6 +118,8 @@ func! CompileRungcc()
     elseif &filetype == 'go'
         exec "!go build %<"
         exec "!time ./%<"
+    elseif &filetype == 'javascript'
+        exec "!node %<"
     elseif &filetype == 'lua'
         exec "!time lua %"
     elseif &filetype == 'qml'
