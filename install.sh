@@ -53,7 +53,6 @@ if [vim_info >=8.0];then
     git clone https://github.com/alvan/vim-closetag
     git clone https://github.com/gorodinskiy/vim-coloresque
     git clone https://github.com/Valloric/MatchTagAlways
-    git clone https://github.com/ternjs/tern_for_vim
     git clone https://github.com/Chiel92/vim-autoformat
     git clone https://github.com/maksimr/vim-jsbeautify
     git clone https://github.com/sjl/gundo.vim
