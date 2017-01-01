@@ -63,13 +63,15 @@ if [vim_info >=8.0];then
     ./install.py --clang-completer
     cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py ~
     cp ~/.vim/pack/plugin/opt/vim-instant-markdown/after/ftplugin/markdown/instant-markdown.vim ~/.vim/plugin/instant-markdown.vim
-    cd ~/.vim/pack/plugin/opt/tern_for_vim
     sudo npm install -g
     sudo npm -g install instant-markdown-d && cd ~
     sudo npm -g install js-beautify
     sudo npm -g install jshint
     sudo npm -g install csslint
     clang-format  -style=google -dump-config > .clang-format
+    chmod +x update.sh
+    echo 安装完成
+    echo "编译ycm cd ~/.vim/bundle/YouCompleteMe && ./install.py -all"
 else
     mkdir ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
