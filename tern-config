@@ -2,7 +2,9 @@
     "libs": [
         "browser",
         "underscore",
-        "jquery"
+        "jquery",
+        "vue",
+        "bootstrap"
     ],
     "plugins": {
         "node":{}
