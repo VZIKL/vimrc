@@ -379,13 +379,13 @@ set statusline+=%*
 " let g:syntastic_error_symbol='>>'       " 错误行使用'>>' 标记
 " let g:syntastic_warning_symbol='>'      " 警告行使用'>' 标记
 " let g:syntastic_error_symbol = '✖'
-" let g:syntastic_warning_symbol = '⚠️'
-" let g:syntastic_style_error_symbol = '⁉️'
-" let g:syntastic_error_symbol = "✗"
 " let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_error_symbol = "☠"
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_error_symbol = "☢"
+" let g:syntastic_error_symbol = "☠"
+" let g:syntastic_warning_symbol = "⚠"
+" let g:syntastic_style_error_symbol = "☢"
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
