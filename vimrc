@@ -1,18 +1,23 @@
 "vimrc
 
 set ar
+set autoread
+set autowrite
 set aw
 set cmdheight=2
+set confirm
 set eb
 set encoding=utf-8
 set et
 set expandtab
 set fillchars=stl:^,stlnc:=,vert:\|,fold:-,diff:-
 set fo+=mB
+set foldenable
 set history=1000
 set iskeyword+=_,@,#,%,-
 set laststatus=2
 set lbr
+set magic
 set mouse=a
 set number
 set shm=atI
@@ -22,6 +27,9 @@ set tabstop=4
 set ts=4
 set viminfo+=!
 set ww+=<,>,h,l
+
+
+
 
 filetype on
 filetype plugin on
@@ -107,9 +115,7 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
-noremap k gk
 noremap gk k
-noremap j gj
 noremap gj j
 noremap H ^
 noremap L $
@@ -128,42 +134,41 @@ packadd L9
 packadd YouCompleteMe
 packadd auto-pairs
 packadd ctrlp.vim
-packadd molokai
-packadd nerdtree
-packadd nerdcommenter
+packadd emmet-vim
+packadd gundo.vim
 packadd indentLine
+packadd molokai
+packadd nerdcommenter
+packadd nerdtree
 packadd rainbow_parentheses.vim
+packadd sparkup
 packadd supertab
 packadd syntastic
-packadd tagbar
-packadd vim-airline
-packadd vim-airline-themes
 packadd tabular
+packadd tagbar
+packadd tern_for_vim
 packadd tlib_vim
 packadd ultisnips
 packadd vim-addon-mw-utils
+packadd vim-airline
+packadd vim-airline-themes
 packadd vim-autoclose
 packadd vim-autoformat
+packadd vim-closetag
+packadd vim-coloresque
 packadd vim-easymotion
 packadd vim-fugitive
+packadd vim-instant-markdown
+packadd vim-jsbeautify
+packadd vim-markdown
+packadd vim-multiple-cursors
+packadd vim-qml
 packadd vim-snipmate
 packadd vim-snippets
 packadd vim-surround
-packadd vimproc.vim
-packadd emmet-vim
-packadd sparkup
-packadd vim-instant-markdown
-packadd vim-markdown
-packadd vim-qml
 packadd vim-yapf
+packadd vimproc.vim
 packadd xmledit
-packadd vim-coloresque
-packadd vim-closetag
-" packadd MatchTagAlways
-packadd vim-jsbeautify
-packadd gundo.vim
-packadd tern_for_vim
-packadd vim-multiple-cursors
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
@@ -186,8 +191,8 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中
 inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
-let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_previous_completion=['<c-p>']
+let g:ycm_key_list_select_completion=['<C-n>']
+let g:ycm_key_list_previous_completion=['<C-p>']
 let g:ycm_semantic_triggers = {
             \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
             \   'css': [ 're!^\s{2,4}', 're!:\s+'   ],
@@ -207,6 +212,11 @@ let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_show_diagnostics_ui = 0
 
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-e>"
+
 let g:tagbar_ctags_bin="/usr/bin/ctags"
 let g:tagbat_autofocus=1
 
@@ -214,7 +224,6 @@ scriptencoding utf-8
 let g:yapf_style = "google" 
 nnoremap <Leader>y :call Yapf()<cr>
 
-let g:UltiSnipsExpandTrigger="<C-c>"
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
