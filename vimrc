@@ -29,8 +29,6 @@ set viminfo+=!
 set ww+=<,>,h,l
 
 
-
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -130,6 +128,7 @@ let mapleader=','
 let g:mapleader=','
 
 "Plugin List
+packadd supertab
 packadd L9
 packadd YouCompleteMe
 packadd auto-pairs
@@ -142,7 +141,6 @@ packadd nerdcommenter
 packadd nerdtree
 packadd rainbow_parentheses.vim
 packadd sparkup
-packadd supertab
 packadd syntastic
 packadd tabular
 packadd tagbar
