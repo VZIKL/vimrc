@@ -7,7 +7,6 @@ set aw
 set cmdheight=2
 set confirm
 set eb
-set encoding=utf-8
 set et
 set expandtab
 set fillchars=stl:^,stlnc:=,vert:\|,fold:-,diff:-
@@ -316,3 +315,4 @@ colorscheme molokai
 let g:molokai_original=1
 let g:rehash256=1
 
+set encoding=utf-8
