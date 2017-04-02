@@ -19,6 +19,7 @@ set lbr
 set magic
 set mouse=a
 set number
+set noswapfile
 set shm=atI
 set smarttab
 set sw=4
@@ -72,7 +73,7 @@ func! CompileRungcc()
         exec "!g++ % -o %<"
         exec "!time ./%<"
     elseif &filetype == "cpp"
-        exec "!g++ % -o %< -std=c++14"
+        exec "!g++ % -o %< -std=c++14 -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_font -lallegro_ttf -lallegro_image -lallegro_audio -lallegro_primitives -lallegro_dialog"
         exec "!time ./%<"
     elseif &filetype == "sh"
         :!time bash %
@@ -306,6 +307,7 @@ let g:tagbar_type_markdown = {
             \ ]
             \ }
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
 let g:instant_markdown_autostart = 0
 
 syntax on
