@@ -28,7 +28,6 @@ set ts=4
 set viminfo+=!
 set ww+=<,>,h,l
 
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -73,14 +72,14 @@ func! CompileRungcc()
         exec "!g++ % -o %<"
         exec "!time ./%<"
     elseif &filetype == "cpp"
-        exec "!g++ % -o %< -std=c++14 -I/usr/include/allegro5 -L/usr/lib -lallegro -lallegro_font -lallegro_ttf -lallegro_image -lallegro_audio -lallegro_primitives -lallegro_dialog"
+        exec "!make rebuild"
         exec "!time ./%<"
     elseif &filetype == "sh"
         :!time bash %
     elseif &filetype == "python"
         exec "!time python %"
     elseif &filetype == "html"
-        exec "!time firefox % &"
+        exec "!time google-chrome-unstable % &"
         "elseif &filetype == "go"
         "    exec "!time go build %<"
         "    exec "!time ./%<"
@@ -132,19 +131,16 @@ packadd supertab
 packadd L9
 packadd YouCompleteMe
 packadd auto-pairs
-packadd ctrlp.vim
-packadd emmet-vim
+" packadd ctrlp.vim
 packadd gundo.vim
 packadd indentLine
 packadd molokai
 packadd nerdcommenter
 packadd nerdtree
 packadd rainbow_parentheses.vim
-packadd sparkup
 packadd syntastic
 packadd tabular
 packadd tagbar
-packadd tern_for_vim
 packadd tlib_vim
 packadd ultisnips
 packadd vim-addon-mw-utils
@@ -153,12 +149,8 @@ packadd vim-airline-themes
 packadd vim-autoclose
 packadd vim-autoformat
 packadd vim-closetag
-packadd vim-coloresque
 packadd vim-easymotion
 packadd vim-fugitive
-packadd vim-instant-markdown
-packadd vim-jsbeautify
-packadd vim-markdown
 packadd vim-multiple-cursors
 packadd vim-qml
 packadd vim-snipmate
@@ -226,6 +218,7 @@ nnoremap <Leader>y :call Yapf()<cr>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
@@ -247,17 +240,17 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height = 5
 
-let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+ let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
+ let g:NERDTrimTrailingWhitespace = 1
+ let g:NERDTreeDirArrowExpandable = '▸'
+ let g:NERDTreeDirArrowCollapsible = '▾'
 
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'   }   }
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
+ let g:NERDSpaceDelims = 1
+ let g:NERDCompactSexyComs = 1
+ let g:NERDDefaultAlign = 'left'
+ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'   }   }
+ let g:NERDCommentEmptyLines = 1
+ let g:NERDTrimTrailingWhitespace = 1
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
@@ -265,6 +258,15 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+
+autocmd BufRead,BufNewFile *.{html,htm},*.js,*.css exec ":call Web()"
+
+func Web()
+packadd sparkup
+packadd emmet-vim
+packadd tern_for_vim
+packadd vim-coloresque
+packadd vim-jsbeautify
 let g:rbpt_colorpairs = [
             \ ['brown',       'RoyalBlue3'],
             \ ['Darkblue',    'SeaGreen3'],
@@ -289,6 +291,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+endfunc
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
@@ -298,6 +301,12 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+
+autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} exec ":call Markdown()"
+
+func Markdown()
+packadd vim-instant-markdown
+packadd vim-markdown
 let g:tagbar_type_markdown = {
             \ 'ctagstype' : 'markdown',
             \ 'kinds' : [
@@ -309,6 +318,8 @@ let g:tagbar_type_markdown = {
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:instant_markdown_autostart = 0
+endfunc
+
 
 syntax on
 
