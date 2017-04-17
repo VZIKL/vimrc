@@ -156,7 +156,6 @@ packadd vim-qml
 packadd vim-snipmate
 packadd vim-snippets
 packadd vim-surround
-packadd vim-yapf
 packadd vimproc.vim
 packadd xmledit
 
@@ -183,12 +182,8 @@ inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 let g:ycm_key_list_select_completion=['<C-n>']
 let g:ycm_key_list_previous_completion=['<C-p>']
-let g:ycm_semantic_triggers = {
-            \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
-            \   'css': [ 're!^\s{2,4}', 're!:\s+'   ],
-            \   'html': [ '</'  ],
-            \}
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
 let g:ycm_key_list_invoke_completion=""
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -210,9 +205,6 @@ let g:UltiSnipsListSnippets="<c-e>"
 let g:tagbar_ctags_bin="/usr/bin/ctags"
 let g:tagbat_autofocus=1
 
-scriptencoding utf-8 
-let g:yapf_style = "google" 
-nnoremap <Leader>y :call Yapf()<cr>
 
 
 set statusline+=%#warningmsg#
@@ -229,28 +221,22 @@ highlight link SyntasticStyleWarningSign SignColumn
 let g:syntastic_check_on_open=1     " 打开文件时即开启语法检查
 let g:syntastic_check_on_wq=0       " 保存时进行语法检查
 let g:syntastic_enable_highlighting=1   " 提示内容高亮显示
-let g:syntastic_python_checkers=['pyflakes', 'pep8']
-let g:syntastic_cpp_checkers = ['gcc']
-let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_compiler_options = '-std=c++14'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height = 5
 
- let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
- let g:NERDTrimTrailingWhitespace = 1
- let g:NERDTreeDirArrowExpandable = '▸'
- let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
- let g:NERDSpaceDelims = 1
- let g:NERDCompactSexyComs = 1
- let g:NERDDefaultAlign = 'left'
- let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'   }   }
- let g:NERDCommentEmptyLines = 1
- let g:NERDTrimTrailingWhitespace = 1
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'   }   }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
@@ -270,6 +256,8 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
+au filetype cpp,c source ~/.vim/cpp_config.vim
+au filetype python source ~/.vim/python_config.vim
 
 syntax on
 
