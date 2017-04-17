@@ -259,40 +259,6 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 
-autocmd BufRead,BufNewFile *.{html,htm},*.js,*.css exec ":call Web()"
-
-func Web()
-packadd sparkup
-packadd emmet-vim
-packadd tern_for_vim
-packadd vim-coloresque
-packadd vim-jsbeautify
-let g:rbpt_colorpairs = [
-            \ ['brown',       'RoyalBlue3'],
-            \ ['Darkblue',    'SeaGreen3'],
-            \ ['darkgray',    'DarkOrchid3'],
-            \ ['darkgreen',   'firebrick3'],
-            \ ['darkcyan',    'RoyalBlue3'],
-            \ ['darkred',     'SeaGreen3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['brown',       'firebrick3'],
-            \ ['gray',        'RoyalBlue3'],
-            \ ['black',       'SeaGreen3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['Darkblue',    'firebrick3'],
-            \ ['darkgreen',   'RoyalBlue3'],
-            \ ['darkcyan',    'SeaGreen3'],
-            \ ['darkred',     'DarkOrchid3'],
-            \ ['red',         'firebrick3'],
-            \ ]
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-endfunc
-
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-overwin-f2)
@@ -302,24 +268,8 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
-autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} exec ":call Markdown()"
-
-func Markdown()
-packadd vim-instant-markdown
-packadd vim-markdown
-let g:tagbar_type_markdown = {
-            \ 'ctagstype' : 'markdown',
-            \ 'kinds' : [
-            \ 'h:Heading_L1',
-            \ 'i:Heading_L2',
-            \ 'k:Heading_L3'
-            \ ]
-            \ }
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_no_extensions_in_markdown = 1
-let g:instant_markdown_autostart = 0
-endfunc
-
+au filetype markdown source ~/.vim/markdown.vim
+au filetype html,css,js source ~/.vim/web.vim
 
 syntax on
 
