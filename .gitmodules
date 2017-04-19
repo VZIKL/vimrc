@@ -5,8 +5,8 @@
 	path = pack/plugin/opt/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways
 [submodule "pack/plugin/opt/YouCompleteMe"]
-    path = pack/plugin/opt/YouCompleteMe
-    url = https://github.com/Valloric/YouCompleteMe
+	path = pack/plugin/opt/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "pack/plugin/opt/auto-pairs"]
 	path = pack/plugin/opt/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
