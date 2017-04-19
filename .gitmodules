@@ -1,0 +1,122 @@
+[submodule "pack/plugin/opt/L9"]
+    path = pack/plugin/opt/L9
+    url = https://github.com/vim-scripts/L9
+[submodule "pack/plugin/opt/MatchTagAlways"]
+    path = pack/plugin/opt/MatchTagAlways
+    url = https://github.com/Valloric/MatchTagAlways
+[submodule "pack/plugin/opt/YouComplete"]
+    path = pack/plugin/opt/YouComplete
+    url = https://github.com/Valloric/YouCompleteMe
+[submodule "pack/plugin/opt/auto-pairs"]
+    path = pack/plugin/opt/auto-pairs
+    url = https://github.com/jiangmiao/auto-pairs
+[submodule "pack/plugin/opt/ctrlp.vim"]
+    path = pack/plugin/opt/ctrlp.vim
+    url = https://github.com/kien/ctrlp.vim
+[submodule "pack/plugin/opt/emmet-vim"]
+    path = pack/plugin/opt/emmet-vim
+    url = https://github.com/mattn/emmet-vim
+[submodule "pack/plugin/opt/gundo.vim"]
+    path = pack/plugin/opt/gundo.vim
+    url = https://github.com/sjl/gundo.vim
+[submodule "pack/plugin/opt/indentLine"]
+    path = pack/plugin/opt/indentLine
+    url = https://github.com/Yggdroot/indentLine
+[submodule "pack/plugin/opt/molokai"]
+    path = pack/plugin/opt/molokai
+    url = https://github.com/tomasr/molokai
+[submodule "pack/plugin/opt/nerdcommenter"]
+    path = pack/plugin/opt/nerdcommenter
+    url = https://github.com/scrooloose/nerdcommenter
+[submodule "pack/plugin/opt/nerdtree"]
+    path = pack/plugin/opt/nerdtree
+    url = https://github.com/scrooloose/nerdtree
+[submodule "pack/plugin/opt/rainbow_parentheses.vim"]
+    path = pack/plugin/opt/rainbow_parentheses.vim
+    url = https://github.com/kien/rainbow_parentheses.vim
+[submodule "pack/plugin/opt/sparkup"]
+    path = pack/plugin/opt/sparkup
+    url = https://github.com/rstacruz/sparkup
+[submodule "pack/plugin/opt/supertab"]
+    path = pack/plugin/opt/supertab
+    url = https://github.com/ervandew/supertab
+[submodule "pack/plugin/opt/synastic"]
+    path = pack/plugin/opt/synastic
+    url = https://github.com/vim-syntastic/syntastic
+[submodule "pack/plugin/opt/tabular"]
+    path = pack/plugin/opt/tabular
+    url = https://github.com/godlygeek/tabular
+[submodule "pack/plugin/opt/tagbar"]
+    path = pack/plugin/opt/tagbar
+    url = https://github.com/majutsushi/tagbar
+[submodule "pack/plugin/opt/tern_for_vim"]
+    path = pack/plugin/opt/tern_for_vim
+    url = https://github.com/ternjs/tern_for_vim
+[submodule "pack/plugin/opt/tlib_vim"]
+    path = pack/plugin/opt/tlib_vim
+    url = https://github.com/tomtom/tlib_vim
+[submodule "pack/plugin/opt/ultisnips"]
+    path = pack/plugin/opt/ultisnips
+    url = https://github.com/SirVer/ultisnips
+[submodule "pack/plugin/opt/vim-addon-mw-utils"]
+    path = pack/plugin/opt/vim-addon-mw-utils
+    url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule "pack/plugin/opt/vim-airline"]
+    path = pack/plugin/opt/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+[submodule "pack/plugin/opt/vim-airline-themes"]
+    path = pack/plugin/opt/vim-airline-themes
+    url = https://github.com/vim-airline/vim-airline
+-themes
+[submodule "pack/plugin/opt/vim-autoclose"]
+    path = pack/plugin/opt/vim-autoclose
+    url = https://github.com/Townk/vim-autoclose
+[submodule "pack/plugin/opt/vim-autoformat"]
+    path = pack/plugin/opt/vim-autoformat
+    url = https://github.com/Chiel92/vim-autoformat
+[submodule "pack/plugin/opt/vim-closetag"]
+    path = pack/plugin/opt/vim-closetag
+    url =https://github.com/alvan/vim-closetag
+[submodule "pack/plugin/opt/vim-coloresque"]
+    path = pack/plugin/opt/vim-coloresque
+    url = https://github.com/gko/vim-coloresque
+[submodule "pack/plugin/opt/vim-easymotion"]
+    path = pack/plugin/opt/vim-easymotion
+    url = https://github.com/easymotion/vim-easymotion
+[submodule "pack/plugin/opt/vim-fugitive"]
+    path = pack/plugin/opt/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
+[submodule "pack/plugin/opt/vim-instant-markdown"]
+    path = pack/plugin/opt/vim-instant-markdown
+    url = https://github.com/suan/vim-instant-markdown
+[submodule "pack/plugin/opt/vim-jsbeautify"]
+    path = pack/plugin/opt/vim-jsbeautify
+    url = https://github.com/maksimr/vim-jsbeautify
+[submodule "pack/plugin/opt/vim-markdown"]
+    path = pack/plugin/opt/vim-markdown
+    url = https://github.com/plasticboy/vim-markdown
+[submodule "pack/plugin/opt/vim-multiple-cursors"]
+    path = pack/plugin/opt/vim-multiple-cursors
+    url = https://github.com/terryma/vim-multiple-cursors
+[submodule "pack/plugin/opt/vim-qml"]
+    path = pack/plugin/opt/vim-qml
+    url = https://github.com/peterhoeg/vim-qml
+[submodule "pack/plugin/opt/vim-snipmate"]
+    path = pack/plugin/opt/vim-snipmate
+    url = https://github.com/peterhoeg/vim-qml
+[submodule "pack/plugin/opt/vim-snippets"]
+    path = pack/plugin/opt/vim-snippets
+    url = https://github.com/garbas/vim-snipmate
+[submodule "pack/plugin/opt/vim-surround"]
+    path = pack/plugin/opt/vim-surround
+    url = https://github.com/tpope/vim-surround
+[submodule "pack/plugin/opt/vim-yapf"]
+    path = pack/plugin/opt/vim-yapf
+    url = https://github.com/mindriot101/vim-yapf
+[submodule "pack/plugin/opt/vimproc.vim"]
+    path = pack/plugin/opt/vimproc.vim
+    url = https://github.com/Shougo/vimproc.vim
+[submodule "pack/plugin/opt/xmledit"]
+    path = pack/plugin/opt/xmledit
+    url = https://github.com/sukima/xmledit
+
