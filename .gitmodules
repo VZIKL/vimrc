@@ -4,8 +4,8 @@
 [submodule "pack/plugin/opt/MatchTagAlways"]
     path = pack/plugin/opt/MatchTagAlways
     url = https://github.com/Valloric/MatchTagAlways
-[submodule "pack/plugin/opt/YouComplete"]
-    path = pack/plugin/opt/YouComplete
+[submodule "pack/plugin/opt/YouCompleteMe"]
+    path = pack/plugin/opt/YouCompleteMe
     url = https://github.com/Valloric/YouCompleteMe
 [submodule "pack/plugin/opt/auto-pairs"]
     path = pack/plugin/opt/auto-pairs
@@ -40,9 +40,9 @@
 [submodule "pack/plugin/opt/supertab"]
     path = pack/plugin/opt/supertab
     url = https://github.com/ervandew/supertab
-[submodule "pack/plugin/opt/synastic"]
-    path = pack/plugin/opt/synastic
-    url = https://github.com/vim-syntastic/syntastic
+[submodule "pack/plugin/opt/syntastic"]
+    path = pack/plugin/opt/syntastic
+    url = https://github.com/scrooloose/syntastic
 [submodule "pack/plugin/opt/tabular"]
     path = pack/plugin/opt/tabular
     url = https://github.com/godlygeek/tabular
