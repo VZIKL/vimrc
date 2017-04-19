@@ -66,8 +66,7 @@
     url = https://github.com/vim-airline/vim-airline
 [submodule "pack/plugin/opt/vim-airline-themes"]
     path = pack/plugin/opt/vim-airline-themes
-    url = https://github.com/vim-airline/vim-airline
--themes
+    url = https://github.com/vim-airline/vim-airline-themes
 [submodule "pack/plugin/opt/vim-autoclose"]
     path = pack/plugin/opt/vim-autoclose
     url = https://github.com/Townk/vim-autoclose
