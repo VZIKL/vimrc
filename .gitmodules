@@ -7,6 +7,12 @@
 [submodule "pack/plugin/opt/YouCompleteMe"]
     path = pack/plugin/opt/YouCompleteMe
     url = https://github.com/Valloric/YouCompleteMe
+[submodule "pack/plugin/opt/YouCompleteMe/third_party/requests-futures"]
+    path = pack/plugin/opt/third_party/requests-futures
+    url = https://github.com/ross/requests-futures
+[submodule "pack/plugin/opt/YouCompleteMe/third_party/ycmd"]
+    path = pack/plugin/opt/YouCompleteMe/third_party/ycmd
+    url = https://github.com/Valloric/ycmd
 [submodule "pack/plugin/opt/auto-pairs"]
     path = pack/plugin/opt/auto-pairs
     url = https://github.com/jiangmiao/auto-pairs
