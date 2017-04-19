@@ -118,4 +118,3 @@
 [submodule "pack/plugin/opt/xmledit"]
     path = pack/plugin/opt/xmledit
     url = https://github.com/sukima/xmledit
-
