@@ -101,8 +101,8 @@
 	path = pack/plugin/opt/vim-qml
 	url = https://github.com/peterhoeg/vim-qml
 [submodule "pack/plugin/opt/vim-snipmate"]
-    path = pack/plugin/opt/vim-snipmate
-    url = https://github.com/garbas/vim-snipmate
+	path = pack/plugin/opt/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
 [submodule "pack/plugin/opt/vim-snippets"]
 	path = pack/plugin/opt/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
