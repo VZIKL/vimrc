@@ -35,16 +35,22 @@ filetype indent on
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufRead,BufNewFile *.qml set filetype=qml
-autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua exec ":call SetTitle()"
+autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 func SetTitle()
     if &filetype == 'sh'
         call setline(1,"#!/bin/bash")
         call append(line("."),"")
-        "elseif &filetype == 'lua'
-        "    call setline(1,"#!/usr/bin/lua")
-        "    call append(line("."),"")
+    elseif &filetype == 'lua'
+        call setline(1,"#!/usr/bin/lua")
+        call append(line("."),"")
     elseif &filetype == 'python'
         call setline(1,"#!/usr/bin/python")
+        call append(line("."),"")
+    elseif &filetype == 'perl'
+        call setline(1,"#!/usr/bin/perl")
+        call append(line("."),"")
+    elseif &filetype == 'ruby'
+        call setline(1,"#!/usr/bin/ruby")
         call append(line("."),"")
     else
         call setline(1, "//File Name: ".expand("%"))
@@ -65,8 +71,8 @@ endfunc
 
 autocmd BufNewFile * normal G
 
-map <C-i> :call CompileRungcc()<CR>
-func! CompileRungcc()
+map <C-i> :call Compile()<CR>
+func! Compile()
     exec "w"
     if &filetype == "c"
         exec "!g++ % -o %<"
@@ -80,13 +86,17 @@ func! CompileRungcc()
         exec "!time python %"
     elseif &filetype == "html"
         exec "!time google-chrome-unstable % &"
-        "elseif &filetype == "go"
-        "    exec "!time go build %<"
-        "    exec "!time ./%<"
+    elseif &filetype == "go"
+        exec "!time go build %<"
+        exec "!time ./%<"
     elseif &filetype == "javascript"
         exec "!node %<"
     elseif &filetype == "lua"
         exec "!time lua %"
+    elseif &filetype == "perl"
+        exec "!time perl %"
+    elseif &filetype == "ruby"
+        exec "!time ruby %"
     elseif &filetype == "qml"
         exec "!time qmlscene %"
     endif
@@ -100,7 +110,8 @@ nnoremap <C-y> 2<C-y>
 nnoremap U <C-r>
 
 autocmd vimenter * Tagbar
-"autocmd vimenter * wincmd p
+" autocmd vimenter * NERDTree
+" autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 if has("autocmd")
