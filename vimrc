@@ -75,8 +75,7 @@ map <C-i> :call Compile()<CR>
 func! Compile()
     exec "w"
     if &filetype == "c"
-        let make_file = findfile("makefile", ".;")
-        if make_file == "makefile"
+        if findfile("makefile", ".;") == "makefile"
             exec "!make rebuild"
             exec "!time ./%<"
         else
@@ -84,8 +83,7 @@ func! Compile()
             exec "!time ./%<"
         endif
     elseif &filetype == "cpp"
-        let make_file = findfile("makefile", ".;")
-        if make_file == "makefile"
+        if findfile("makefile", ".;") == "makefile"
             exec "!make rebuild"
             exec "!time ./%<"
         else
