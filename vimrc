@@ -75,11 +75,21 @@ map <C-i> :call Compile()<CR>
 func! Compile()
     exec "w"
     if &filetype == "c"
-        exec "!g++ % -o %<"
-        exec "!time ./%<"
+        if  findfile("makefile", ".;") != "makefile"
+            exec "!g++ % -o %<"
+            exec "!time ./%<"
+        else
+            exec "!make rebuild"
+            exec "!time ./%<"
+        endif
     elseif &filetype == "cpp"
-        exec "!make rebuild"
-        exec "!time ./%<"
+        if  findfile("makefile", ".;") != "makefile"
+            exec "g++ % -o %< -std=c++14"
+            exec "!time ./%<"
+        else
+            exec "!make rebuild"
+            exec "!time ./%<"
+        endif
     elseif &filetype == "sh"
         :!time bash %
     elseif &filetype == "python"
