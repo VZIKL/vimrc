@@ -179,6 +179,7 @@ packadd vim-snippets
 packadd vim-surround
 packadd vimproc.vim
 packadd xmledit
+packadd vim-buffergator
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
