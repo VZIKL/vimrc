@@ -160,7 +160,6 @@ packadd nerdcommenter
 packadd nerdtree
 packadd rainbow_parentheses.vim
 packadd syntastic
-packadd tabular
 packadd tagbar
 packadd tlib_vim
 packadd ultisnips
@@ -171,6 +170,7 @@ packadd vim-autoclose
 packadd vim-autoformat
 packadd vim-closetag
 packadd vim-easymotion
+packadd vim-easy-align
 packadd vim-fugitive
 packadd vim-multiple-cursors
 packadd vim-qml
@@ -276,10 +276,14 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
 au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
 au filetype cpp,c source ~/.vim/cpp_config.vim
 au filetype python source ~/.vim/python_config.vim
+
 
 syntax on
 

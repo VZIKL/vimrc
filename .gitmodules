@@ -43,9 +43,6 @@
 [submodule "pack/plugin/opt/syntastic"]
 	path = pack/plugin/opt/syntastic
 	url = https://github.com/scrooloose/syntastic
-[submodule "pack/plugin/opt/tabular"]
-	path = pack/plugin/opt/tabular
-	url = https://github.com/godlygeek/tabular
 [submodule "pack/plugin/opt/tagbar"]
 	path = pack/plugin/opt/tagbar
 	url = https://github.com/majutsushi/tagbar
@@ -121,3 +118,6 @@
 [submodule "pack/plugin/opt/vim-buffergator"]
 	path = pack/plugin/opt/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator
+[submodule "pack/plugin/opt/vim-easy-align"]
+	path = pack/plugin/opt/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
