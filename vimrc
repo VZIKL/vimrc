@@ -284,8 +284,8 @@ au filetype python source ~/.vim/python_config.vim
 syntax on
 
 set background=dark
+" let g:rehash256=1
+" let g:molokai_original=1
 colorscheme molokai
-let g:rehash256=1
-let g:molokai_original=1
 
 set encoding=utf-8
