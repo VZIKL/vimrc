@@ -180,6 +180,7 @@ packadd vim-surround
 packadd vimproc.vim
 packadd xmledit
 packadd vim-buffergator
+packadd kotlin-vim
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
@@ -283,6 +284,7 @@ au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
 au filetype cpp,c source ~/.vim/cpp_config.vim
 au filetype python source ~/.vim/python_config.vim
+au filetype lisp source ~/.vim/lisp_config.vim
 
 
 syntax on
