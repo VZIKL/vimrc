@@ -121,3 +121,6 @@
 [submodule "pack/plugin/opt/vim-easy-align"]
 	path = pack/plugin/opt/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
+[submodule "pack/plugin/opt/slimv"]
+	path = pack/plugin/opt/slimv
+	url = https://github.com/kovisoft/slimv

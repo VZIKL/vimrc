@@ -109,6 +109,8 @@ func! Compile()
         exec "!time ruby %"
     elseif &filetype == "qml"
         exec "!time qmlscene %"
+    elseif &filetype == "ebuild"
+        exec "!ebuild % manifest"
     endif
 endfunc
 
