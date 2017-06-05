@@ -140,10 +140,6 @@ noremap gj j
 noremap H ^
 noremap L $
 
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
 inoremap kj <Esc>
 
 let mapleader=','
@@ -182,7 +178,6 @@ packadd vim-surround
 packadd vimproc.vim
 packadd xmledit
 packadd vim-buffergator
-packadd kotlin-vim
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
@@ -292,8 +287,8 @@ au filetype lisp source ~/.vim/lisp_config.vim
 syntax on
 
 set background=dark
-" let g:rehash256=1
-" let g:molokai_original=1
+let g:rehash256=1
+let g:molokai_original=1
 colorscheme molokai
 
 set encoding=utf-8
