@@ -114,17 +114,13 @@ func! Compile()
     endif
 endfunc
 
-map <F3> :NERDTreeToggle<CR>
-map <F8> :TagbarToggle<CR>
 nnoremap <C-h> :Autoformat<CR>
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap U <C-r>
 
-autocmd vimenter * Tagbar
 " autocmd vimenter * NERDTree
 " autocmd vimenter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -152,18 +148,13 @@ packadd YouCompleteMe
 packadd auto-pairs
 " packadd ctrlp.vim
 packadd gundo.vim
-packadd indentLine
 packadd molokai
 packadd nerdcommenter
-packadd nerdtree
 packadd rainbow_parentheses.vim
 packadd syntastic
-packadd tagbar
 packadd tlib_vim
 packadd ultisnips
 packadd vim-addon-mw-utils
-packadd vim-airline
-packadd vim-airline-themes
 packadd vim-autoclose
 packadd vim-autoformat
 packadd vim-closetag
@@ -179,20 +170,6 @@ packadd vimproc.vim
 packadd xmledit
 packadd vim-buffergator
 
-let g:airline_powerline_fonts = 1
-let g:airline_detect_whitespace=0
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
-let g:airline_theme="powerlineish"
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-let g:indentLine_leadingSpaceEnabled = 1
 
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
@@ -222,10 +199,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
 
-let g:tagbar_ctags_bin="/usr/bin/ctags"
-let g:tagbat_autofocus=1
-
-
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -245,18 +218,6 @@ let g:syntastic_enable_highlighting=1   " 提示内容高亮显示
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height = 5
-
-let NERDTreeIgnore=['\.pyc$','\.pyo$','\.o$','\.so$','\.egg$'] "忽略文件
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'   }   }
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
@@ -283,6 +244,7 @@ au filetype cpp,c source ~/.vim/cpp_config.vim
 au filetype python source ~/.vim/python_config.vim
 au filetype lisp source ~/.vim/lisp_config.vim
 
+source ~/.vim/ui.vim
 
 syntax on
 
