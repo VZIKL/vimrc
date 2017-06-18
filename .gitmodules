@@ -1,6 +1,3 @@
-[submodule "pack/plugin/opt/L9"]
-	path = pack/plugin/opt/L9
-	url = https://github.com/vim-scripts/L9
 [submodule "pack/plugin/opt/MatchTagAlways"]
 	path = pack/plugin/opt/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways
