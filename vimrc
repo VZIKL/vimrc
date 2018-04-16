@@ -28,14 +28,23 @@ set ts=4
 set viminfo+=!
 set ww+=<,>,h,l
 
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
+source ~/.vim/ui.vim
+
+au filetype lisp source ~/.vim/lisp_config.vim
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufRead,BufNewFile *.qml set filetype=qml
+
+au filetype markdown source ~/.vim/markdown.vim
+au filetype html,css,js source ~/.vim/web.vim
+au filetype cpp,c source ~/.vim/cpp_config.vim
+au filetype python source ~/.vim/python_config.vim
+
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
+autocmd BufNewFile * normal G
+
 func SetTitle()
     if &filetype == 'sh'
         call setline(1,"#!/bin/bash")
@@ -69,7 +78,6 @@ func SetTitle()
     endif
 endfunc
 
-autocmd BufNewFile * normal G
 
 map <C-i> :call Compile()<CR>
 func! Compile()
@@ -114,10 +122,26 @@ func! Compile()
     endif
 endfunc
 
+map <C-w> <C-w>w
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 nnoremap <C-h> :Autoformat<CR>
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap U <C-r>
+noremap gk k
+noremap gj j
+noremap H ^
+noremap L $
+
+inoremap kj <Esc>
+
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中当前项
+inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 " autocmd vimenter * NERDTree
 " autocmd vimenter * wincmd p
@@ -126,24 +150,11 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-map <C-w> <C-w>w
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
-noremap gk k
-noremap gj j
-noremap H ^
-noremap L $
-
-inoremap kj <Esc>
-
 let mapleader=','
 let g:mapleader=','
 
 "Plugin List
 packadd supertab
-packadd L9
 packadd YouCompleteMe
 packadd auto-pairs
 " packadd ctrlp.vim
@@ -173,9 +184,6 @@ packadd vim-buffergator
 
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中当前项
-inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
 
 let g:ycm_key_list_select_completion=['<C-n>']
 let g:ycm_key_list_previous_completion=['<C-p>']
@@ -237,14 +245,6 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
-
-au filetype markdown source ~/.vim/markdown.vim
-au filetype html,css,js source ~/.vim/web.vim
-au filetype cpp,c source ~/.vim/cpp_config.vim
-au filetype python source ~/.vim/python_config.vim
-au filetype lisp source ~/.vim/lisp_config.vim
-
-source ~/.vim/ui.vim
 
 syntax on
 
