@@ -33,3 +33,13 @@ let g:ycm_semantic_triggers = {
             \   'css': [ 're!^\s{2,4}', 're!:\s+'   ],
             \   'html': [ '</'  ],
 
+let g:ale_pattern_options = {
+\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+\}
+
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
+let g:ale_pattern_options_enabled = 1

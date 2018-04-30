@@ -5,7 +5,6 @@ packadd vim-airline-themes
 
 map <F3> :NERDTreeToggle<CR>
 
-autocmd vimenter * Tagbar
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " let g:indentLine_leadingSpaceEnabled = 1

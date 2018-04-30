@@ -20,6 +20,7 @@ set magic
 set mouse=a
 set number
 set noswapfile
+set nocompatible
 set shm=atI
 set smarttab
 set sw=4
@@ -39,7 +40,7 @@ au BufRead,BufNewFile *.qml set filetype=qml
 
 au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
-au filetype cpp,c source ~/.vim/cpp_config.vim
+" au filetype cpp,c source ~/.vim/cpp_config.vim
 au filetype python source ~/.vim/python_config.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
@@ -232,6 +233,9 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
+
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 
 syntax on
 
