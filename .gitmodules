@@ -121,3 +121,12 @@
 [submodule "pack/plugin/opt/slimv"]
 	path = pack/plugin/opt/slimv
 	url = https://github.com/kovisoft/slimv
+[submodule "pack/plugin/opt/ale"]
+	path = pack/plugin/opt/ale
+	url = https://github.com/w0rp/ale
+[submodule "pack/plugin/opt/LeaderF"]
+	path = pack/plugin/opt/LeaderF
+	url = https://github.com/Yggdroot/LeaderF
+[submodule "pack/plugin/opt/denite.nvim"]
+	path = pack/plugin/opt/denite.nvim
+	url = https://github.com/Shougo/denite.nvim
