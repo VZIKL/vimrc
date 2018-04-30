@@ -1,19 +1,15 @@
 packadd indentLine
 packadd nerdtree
-packadd tagbar
 packadd vim-airline
 packadd vim-airline-themes
 
 map <F3> :NERDTreeToggle<CR>
-map <F8> :TagbarToggle<CR>
 
 autocmd vimenter * Tagbar
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " let g:indentLine_leadingSpaceEnabled = 1
 
-let g:tagbar_ctags_bin="/usr/bin/ctags"
-let g:tagbat_autofocus=1
 
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0

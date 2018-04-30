@@ -157,14 +157,15 @@ let g:mapleader=','
 packadd supertab
 packadd YouCompleteMe
 packadd auto-pairs
-" packadd ctrlp.vim
 packadd gundo.vim
 packadd molokai
 packadd nerdcommenter
 packadd rainbow_parentheses.vim
-packadd syntastic
 packadd tlib_vim
 packadd ultisnips
+packadd ale
+packadd LeaderF
+packadd denite.nvim
 packadd vim-addon-mw-utils
 packadd vim-autoclose
 packadd vim-autoformat
@@ -212,20 +213,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
-let g:syntastic_check_on_open=1     " 打开文件时即开启语法检查
-let g:syntastic_check_on_wq=0       " 保存时进行语法检查
-let g:syntastic_enable_highlighting=1   " 提示内容高亮显示
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_loc_list_height = 5
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
