@@ -7,9 +7,6 @@
 [submodule "pack/plugin/opt/auto-pairs"]
 	path = pack/plugin/opt/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule "pack/plugin/opt/ctrlp.vim"]
-	path = pack/plugin/opt/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
 [submodule "pack/plugin/opt/emmet-vim"]
 	path = pack/plugin/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim
@@ -37,12 +34,6 @@
 [submodule "pack/plugin/opt/supertab"]
 	path = pack/plugin/opt/supertab
 	url = https://github.com/ervandew/supertab
-[submodule "pack/plugin/opt/syntastic"]
-	path = pack/plugin/opt/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule "pack/plugin/opt/tagbar"]
-	path = pack/plugin/opt/tagbar
-	url = https://github.com/majutsushi/tagbar
 [submodule "pack/plugin/opt/tern_for_vim"]
 	path = pack/plugin/opt/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim
@@ -108,8 +99,7 @@
 	url = https://github.com/mindriot101/vim-yapf
 [submodule "pack/plugin/opt/vimproc.vim"]
 	path = pack/plugin/opt/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim
-[submodule "pack/plugin/opt/xmledit"]
+	url = https://github.com/Shougo/vimproc.vim [submodule "pack/plugin/opt/xmledit"]
 	path = pack/plugin/opt/xmledit
 	url = https://github.com/sukima/xmledit
 [submodule "pack/plugin/opt/vim-buffergator"]
