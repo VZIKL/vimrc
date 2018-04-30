@@ -99,7 +99,8 @@
 	url = https://github.com/mindriot101/vim-yapf
 [submodule "pack/plugin/opt/vimproc.vim"]
 	path = pack/plugin/opt/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim [submodule "pack/plugin/opt/xmledit"]
+    url = https://github.com/Shougo/vimproc.vim 
+[submodule "pack/plugin/opt/xmledit"]
 	path = pack/plugin/opt/xmledit
 	url = https://github.com/sukima/xmledit
 [submodule "pack/plugin/opt/vim-buffergator"]
