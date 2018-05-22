@@ -99,6 +99,10 @@ func! Compile()
             exec "!g++ % -o %< -std=c++14"
             exec "!time ./%<"
         endif
+    elseif &filetype == "asm"
+        exec "!nasm -f elf ./% -o ./%<.o"
+        exec "!gcc -m32 ./%<.o -o ./%<"
+        exec "!time ./%<"
     elseif &filetype == "sh"
         exec "!time bash %"
     elseif &filetype == "python"
@@ -234,8 +238,9 @@ map <Leader>h <Plug>(easymotion-linebackward)
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
+
 
 syntax on
 
