@@ -9,7 +9,6 @@ set confirm
 set eb
 set et
 set expandtab
-set fillchars=stl:^,stlnc:=,vert:\|,fold:-,diff:-
 set fo+=mB
 set foldenable
 set history=1000
@@ -28,6 +27,7 @@ set tabstop=4
 set ts=4
 set viminfo+=!
 set ww+=<,>,h,l
+set fillchars=stl:^,stlnc:=,vert:\|,fold:-,diff:-
 
 filetype plugin indent on
 
@@ -45,6 +45,15 @@ au filetype python source ~/.vim/python_config.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 autocmd BufNewFile * normal G
+
+
+augroup Mkdir
+  autocmd!
+  autocmd BufWritePre *
+    \ if !isdirectory(expand("<afile>:p:h")) |
+        \ call mkdir(expand("<afile>:p:h"), "p") |
+    \ endif
+augroup END
 
 func SetTitle()
     if &filetype == 'sh'
@@ -80,48 +89,46 @@ func SetTitle()
 endfunc
 
 
-map <C-i> :call Compile()<CR>
+map <F5> :call Compile()<CR>
 func! Compile()
     exec "w"
     if &filetype == "c"
         if findfile("makefile", ".;") == "makefile"
             exec "!make rebuild"
-            exec "!time ./%<"
+            exec "!bash -c 'time ./%<'"
         else
             exec "!g++ % -o %<"
-            exec "!time ./%<"
+            exec "!bash -c 'time ./%<'"
         endif
     elseif &filetype == "cpp"
         if findfile("makefile", ".;") == "makefile"
             exec "!make rebuild"
-            exec "!time ./%<"
+            exec "!bash -c 'time ./%<'"
         else
             exec "!g++ % -o %< -std=c++14"
-            exec "!time ./%<"
+            exec "!bash -c 'time ./%<'"
         endif
     elseif &filetype == "asm"
         exec "!nasm -f elf ./% -o ./%<.o"
         exec "!gcc -m32 ./%<.o -o ./%<"
-        exec "!time ./%<"
+        exec "!bash -c 'time ./%<'"
     elseif &filetype == "sh"
-        exec "!time bash %"
+        exec "!bash -c 'time bash %'"
     elseif &filetype == "python"
-        exec "!time python %"
-    elseif &filetype == "html"
-        exec "!time google-chrome-unstable % &"
+        exec "!bash -c 'time python %'"
     elseif &filetype == "go"
-        exec "!time go build %<"
-        exec "!time ./%<"
+        exec "!bash -c 'time go build %<'"
+        exec "!bash -c 'time ./%<'"
     elseif &filetype == "javascript"
         exec "!node %<"
     elseif &filetype == "lua"
-        exec "!time lua %"
+        exec "!bash -c 'time lua %'"
     elseif &filetype == "perl"
-        exec "!time perl %"
+        exec "!bash -c 'time perl %'"
     elseif &filetype == "ruby"
-        exec "!time ruby %"
+        exec "!bash -c 'time ruby %'"
     elseif &filetype == "qml"
-        exec "!time qmlscene %"
+        exec "!bash -c 'time qmlscene %'"
     elseif &filetype == "ebuild"
         exec "!ebuild % manifest"
     endif
@@ -191,27 +198,27 @@ packadd vim-buffergator
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-let g:ycm_key_list_select_completion=['<C-n>']
-let g:ycm_key_list_previous_completion=['<C-p>']
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_key_list_select_completion   = ['<C-n>']
+let g:ycm_key_list_previous_completion = ['<C-p>']
+let g:ycm_global_ycm_extra_conf        = '~/.ycm_extra_conf.py'
 
-let g:ycm_key_list_invoke_completion=""
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_min_num_of_chars_for_completion=2
-let g:ycm_cache_omnifunc=0
-let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
+let g:ycm_key_list_invoke_completion                    = ""
+let g:ycm_confirm_extra_conf                            = 0
+let g:ycm_collect_identifiers_from_tags_files           = 1
+let g:ycm_min_num_of_chars_for_completion               = 2
+let g:ycm_cache_omnifunc                                = 0
+let g:ycm_seed_identifiers_with_syntax                  = 1
+let g:ycm_complete_in_comments                          = 1
+let g:ycm_complete_in_strings                           = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_server_keep_logfiles=1
-let g:ycm_server_log_level = 'debug'
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_keep_logfiles                          = 1
+let g:ycm_server_log_level                              = 'debug'
+let g:ycm_show_diagnostics_ui                           = 0
 
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-e>"
+let g:UltiSnipsExpandTrigger      = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsListSnippets       = "<c-e>"
 
 
 set statusline+=%#warningmsg#
@@ -219,11 +226,11 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -238,7 +245,7 @@ map <Leader>h <Plug>(easymotion-linebackward)
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
-let g:ale_sign_error = 'X'
+let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '!'
 
 
