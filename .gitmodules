@@ -121,3 +121,6 @@
 [submodule "pack/plugin/opt/denite.nvim"]
 	path = pack/plugin/opt/denite.nvim
 	url = https://github.com/Shougo/denite.nvim
+[submodule "pack/plugin/opt/vim-cpp-enhanced-highlight"]
+	path = pack/plugin/opt/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git

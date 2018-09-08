@@ -40,7 +40,7 @@ au BufRead,BufNewFile *.qml set filetype=qml
 
 au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
-" au filetype cpp,c source ~/.vim/cpp_config.vim
+au filetype cpp,c source ~/.vim/c++_config.vim
 au filetype python source ~/.vim/python_config.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
@@ -87,6 +87,7 @@ func SetTitle()
         call append(line(".")+5, "#endif")
     endif
 endfunc
+
 
 
 map <F5> :call Compile()<CR>
@@ -154,6 +155,7 @@ inoremap kj <Esc>
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中当前项
 inoremap <expr> <C-n>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-p>       pumvisible() ? "\<C-p>" : "\<Up>"
+
 
 " autocmd vimenter * NERDTree
 " autocmd vimenter * wincmd p
