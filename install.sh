@@ -10,4 +10,6 @@ cp ~/.vim/vimrc ~/.vimrc
 cp ~/.vim/pack/plugin/opt/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~
 cp ~/.vim/pack/plugin/opt/slimv/syntax/lisp/slimv-syntax-lisp.vim ~/.vim/syntax/
 
+cp ~/.vim/pack/plugin/opt/vim-airline-themes/autoload/airline/themes/* ~/.vim/pack/plugin/opt/vim-airline/autoload/airline/themes/
+
 rm ~/install.sh
