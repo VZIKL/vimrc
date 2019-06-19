@@ -29,6 +29,9 @@ set viminfo+=!
 set ww+=<,>,h,l
 set fillchars=stl:^,stlnc:=,vert:\|,fold:-,diff:-
 
+set backspace=2
+
+
 filetype plugin indent on
 
 source ~/.vim/ui.vim
@@ -118,7 +121,7 @@ func! Compile()
     elseif &filetype == "python"
         exec "!bash -c 'time python %'"
     elseif &filetype == "go"
-        exec "!bash -c 'time go build %<'"
+        exec "!bash -c 'time go build %'"
         exec "!bash -c 'time ./%<'"
     elseif &filetype == "javascript"
         exec "!node %<"
