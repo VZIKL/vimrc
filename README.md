@@ -12,47 +12,39 @@
 
 ---
 
-| Keybinds | Description              |
-| -------- | ------------------------ |
-| kj       | ESC                      |
-| F3       | Open NerdTree            |
-| F5       | compile file             |
-| C-h      | autoformat file          |
-| H        | To beginning of the line |
-| L        | To ending of the line    |
-| U        | Redo                     |
-| gb       | Next Buffer              |
-| gB       | Last Buffer              |
+| Keybinds   | Description                 |
+| ---------- | --------------------------- |
+| kj         | ESC                         |
+| F3         | Open NerdTree               |
+| F5         | compile file                |
+| H          | To beginning of the line    |
+| L          | To ending of the line       |
+| U          | Redo                        |
+| gb         | Next Buffer                 |
+| gB         | Last Buffer                 |
+| C-j        | AleNext(next error)         |
+| C-k        | AlePrevious(before error)   |
+| ,          | Leader                      |
+| , j/k/h/l  | easymotion j/k/h/l          |
+| s + (word) | easymotion                  |
+| C-e        | Snippets list (insert mode) |
 
 
-### Contain Plugin
+###  Plugin List
 1. YouCompletetMe
 2. supertab
 3. auto-pairs
-4. nerdcommenter
-5. rainbow_parentheses.vim
-6. ultisnips
-7. ale
-8. LeaderF
-9. denite.nvim
-10. autoClose
+4. molokai
+5. nerdcommenter
+6. rainbow_parentheses.vim
+7. tlib_vim
+8. ultisnips
+9. ale
+10. LeaderF
 11. vim-easymotion
 12. vim-easy-align
-13. vim-fugitive
-14. vim-multiple-cursors
-15. vim-snipmate
-16. vim-snippets
-17. vim-buffergator
-18. vim-surround
-19. slimv 
-20. emmet-vim
-21. tern_for_vim
-22. vim-jsbeautify
-23. sparkup
-24. vim-airline
-25. nerdtree
-26. indentLine
-27. vim-markdown
-28. vim-instant-markdown
-29. vim-cpp-enhanced-highlight
-30. vim-yapf
+13. vim-multiple-cursors
+14. vim-snipmate
+15. vim-snippets
+16. vim-surround
+17. ….

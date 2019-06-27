@@ -36,11 +36,11 @@ filetype plugin indent on
 
 source ~/.vim/ui.vim
 
-au filetype lisp source ~/.vim/lisp_config.vim
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufRead,BufNewFile *.qml set filetype=qml
 
+au filetype lisp source ~/.vim/lisp_config.vim
 au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
 au filetype cpp,c source ~/.vim/c++_config.vim
@@ -48,14 +48,15 @@ au filetype python source ~/.vim/python_config.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 autocmd BufNewFile * normal G
+au BufWrite * :Autoformat
 
 
 augroup Mkdir
-  autocmd!
-  autocmd BufWritePre *
-    \ if !isdirectory(expand("<afile>:p:h")) |
-        \ call mkdir(expand("<afile>:p:h"), "p") |
-    \ endif
+    autocmd!
+    autocmd BufWritePre *
+                \ if !isdirectory(expand("<afile>:p:h")) |
+                \ call mkdir(expand("<afile>:p:h"), "p") |
+                \ endif
 augroup END
 
 func SetTitle()
@@ -121,7 +122,6 @@ func! Compile()
     elseif &filetype == "python"
         exec "!bash -c 'time python %'"
     elseif &filetype == "go"
-        exec "!bash -c 'gofmt -w %'"
         exec "!bash -c 'time go build %'"
         exec "!bash -c 'time ./%<'"
     elseif &filetype == "javascript"
@@ -145,7 +145,6 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-nnoremap <C-h> :Autoformat<CR>
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap U <C-r>
@@ -175,7 +174,6 @@ let g:mapleader=','
 packadd supertab
 packadd YouCompleteMe
 packadd auto-pairs
-packadd gundo.vim
 packadd molokai
 packadd nerdcommenter
 packadd rainbow_parentheses.vim
@@ -183,10 +181,6 @@ packadd tlib_vim
 packadd ultisnips
 packadd ale
 packadd LeaderF
-" packadd denite.nvim
-" packadd nvim-yarp
-" packadd vim-hug-neovim-rpc
-" packadd vim-denite-ghq
 packadd vim-addon-mw-utils
 packadd vim-autoclose
 packadd vim-autoformat
@@ -259,7 +253,6 @@ let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '!'
 nmap <C-j> :ALENext<cr>
 nmap <C-k> :ALEPrevious<cr>
-
 
 
 

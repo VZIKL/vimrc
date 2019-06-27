@@ -10,9 +10,6 @@
 [submodule "pack/plugin/opt/emmet-vim"]
 	path = pack/plugin/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim
-[submodule "pack/plugin/opt/gundo.vim"]
-	path = pack/plugin/opt/gundo.vim
-	url = https://github.com/sjl/gundo.vim
 [submodule "pack/plugin/opt/indentLine"]
 	path = pack/plugin/opt/indentLine
 	url = https://github.com/Yggdroot/indentLine

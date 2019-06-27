@@ -3,6 +3,7 @@ packadd emmet-vim
 packadd tern_for_vim
 packadd vim-coloresque
 packadd vim-jsbeautify
+
 let g:rbpt_colorpairs = [
             \ ['brown',       'RoyalBlue3'],
             \ ['Darkblue',    'SeaGreen3'],
@@ -34,12 +35,12 @@ let g:ycm_semantic_triggers = {
             \   'html': [ '</'  ],
 
 let g:ale_pattern_options = {
-\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-\}
+            \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+            \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+            \}
 
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
+            \   'javascript': ['eslint'],
+            \}
 
 let g:ale_pattern_options_enabled = 1

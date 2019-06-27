@@ -1,6 +1,7 @@
 packadd vim-yapf
 scriptencoding utf-8
 let g:yapf_style = "google"
+let g:formatter_yapf_style = 'yapf'
 
 let b:ale_linters                        = ['flake8', 'pylint']
 let b:ale_fixers                         = ['autopep8', 'yapf']
