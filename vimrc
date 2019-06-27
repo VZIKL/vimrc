@@ -121,6 +121,7 @@ func! Compile()
     elseif &filetype == "python"
         exec "!bash -c 'time python %'"
     elseif &filetype == "go"
+        exec "!bash -c 'gofmt -w %'"
         exec "!bash -c 'time go build %'"
         exec "!bash -c 'time ./%<'"
     elseif &filetype == "javascript"
@@ -182,7 +183,10 @@ packadd tlib_vim
 packadd ultisnips
 packadd ale
 packadd LeaderF
-packadd denite.nvim
+" packadd denite.nvim
+" packadd nvim-yarp
+" packadd vim-hug-neovim-rpc
+" packadd vim-denite-ghq
 packadd vim-addon-mw-utils
 packadd vim-autoclose
 packadd vim-autoformat
@@ -250,8 +254,15 @@ map <Leader>h <Plug>(easymotion-linebackward)
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
+"ale binding
 let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '!'
+nmap <C-j> :ALENext<cr>
+nmap <C-k> :ALEPrevious<cr>
+
+
+
+
 
 
 syntax on
