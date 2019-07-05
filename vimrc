@@ -1,5 +1,4 @@
 "vimrc
-
 set ar
 set autoread
 set autowrite
