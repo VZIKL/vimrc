@@ -44,6 +44,7 @@ au filetype markdown source ~/.vim/markdown.vim
 au filetype html,css,js source ~/.vim/web.vim
 au filetype cpp,c source ~/.vim/c++_config.vim
 au filetype python source ~/.vim/python_config.vim
+au filetype go source ~/.vim/golang.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 autocmd BufNewFile * normal G
