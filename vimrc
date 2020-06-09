@@ -48,7 +48,7 @@ au filetype go source ~/.vim/golang.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 autocmd BufNewFile * normal G
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
 
 
 augroup Mkdir
@@ -94,7 +94,7 @@ endfunc
 
 
 
-map <F5> :call Compile()<CR>
+map <F8> :call Compile()<CR>
 func! Compile()
     exec "w"
     if &filetype == "c"
@@ -171,10 +171,11 @@ let mapleader=','
 let g:mapleader=','
 
 "Plugin List
+packadd colorizer
 packadd supertab
 packadd YouCompleteMe
 packadd auto-pairs
-packadd molokai
+packadd vim-monokai-pro
 packadd nerdcommenter
 packadd rainbow_parentheses.vim
 packadd tlib_vim
@@ -261,8 +262,7 @@ nmap <C-k> :ALEPrevious<cr>
 syntax on
 
 set background=dark
-let g:rehash256=1
-let g:molokai_original=1
-colorscheme molokai
+set termguicolors
+colorscheme monokai_pro
 
 set encoding=utf-8

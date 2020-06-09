@@ -33,6 +33,7 @@ let g:ycm_semantic_triggers = {
             \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
             \   'css': [ 're!^\s{2,4}', 're!:\s+'   ],
             \   'html': [ '</'  ],
+            \}
 
 let g:ale_pattern_options = {
             \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},

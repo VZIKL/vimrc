@@ -13,9 +13,6 @@
 [submodule "pack/plugin/opt/indentLine"]
 	path = pack/plugin/opt/indentLine
 	url = https://github.com/Yggdroot/indentLine
-[submodule "pack/plugin/opt/molokai"]
-	path = pack/plugin/opt/molokai
-	url = https://github.com/tomasr/molokai
 [submodule "pack/plugin/opt/nerdcommenter"]
 	path = pack/plugin/opt/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
@@ -121,3 +118,9 @@
 [submodule "pack/plugin/opt/vim-go"]
 	path = pack/plugin/opt/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "pack/plugin/opt/colorizer"]
+	path = pack/plugin/opt/colorizer
+	url = https://github.com/lilydjwg/colorizer
+[submodule "pack/plugin/opt/vim-monokai-pro"]
+	path = pack/plugin/opt/vim-monokai-pro
+	url = https://github.com/phanviet/vim-monokai-pro
