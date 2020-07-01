@@ -7,30 +7,15 @@
 [submodule "pack/plugin/opt/auto-pairs"]
 	path = pack/plugin/opt/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule "pack/plugin/opt/emmet-vim"]
-	path = pack/plugin/opt/emmet-vim
-	url = https://github.com/mattn/emmet-vim
-[submodule "pack/plugin/opt/indentLine"]
-	path = pack/plugin/opt/indentLine
-	url = https://github.com/Yggdroot/indentLine
 [submodule "pack/plugin/opt/nerdcommenter"]
 	path = pack/plugin/opt/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
-[submodule "pack/plugin/opt/nerdtree"]
-	path = pack/plugin/opt/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule "pack/plugin/opt/rainbow_parentheses.vim"]
 	path = pack/plugin/opt/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim
-[submodule "pack/plugin/opt/sparkup"]
-	path = pack/plugin/opt/sparkup
-	url = https://github.com/rstacruz/sparkup
 [submodule "pack/plugin/opt/supertab"]
 	path = pack/plugin/opt/supertab
 	url = https://github.com/ervandew/supertab
-[submodule "pack/plugin/opt/tern_for_vim"]
-	path = pack/plugin/opt/tern_for_vim
-	url = https://github.com/ternjs/tern_for_vim
 [submodule "pack/plugin/opt/tlib_vim"]
 	path = pack/plugin/opt/tlib_vim
 	url = https://github.com/tomtom/tlib_vim
@@ -55,9 +40,6 @@
 [submodule "pack/plugin/opt/vim-closetag"]
 	path = pack/plugin/opt/vim-closetag
 	url = https://github.com/alvan/vim-closetag
-[submodule "pack/plugin/opt/vim-coloresque"]
-	path = pack/plugin/opt/vim-coloresque
-	url = https://github.com/gko/vim-coloresque
 [submodule "pack/plugin/opt/vim-easymotion"]
 	path = pack/plugin/opt/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
@@ -67,9 +49,6 @@
 [submodule "pack/plugin/opt/vim-instant-markdown"]
 	path = pack/plugin/opt/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown
-[submodule "pack/plugin/opt/vim-jsbeautify"]
-	path = pack/plugin/opt/vim-jsbeautify
-	url = https://github.com/maksimr/vim-jsbeautify
 [submodule "pack/plugin/opt/vim-markdown"]
 	path = pack/plugin/opt/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
@@ -97,9 +76,6 @@
 [submodule "pack/plugin/opt/xmledit"]
 	path = pack/plugin/opt/xmledit
 	url = https://github.com/sukima/xmledit
-[submodule "pack/plugin/opt/vim-buffergator"]
-	path = pack/plugin/opt/vim-buffergator
-	url = https://github.com/jeetsukumaran/vim-buffergator
 [submodule "pack/plugin/opt/vim-easy-align"]
 	path = pack/plugin/opt/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align

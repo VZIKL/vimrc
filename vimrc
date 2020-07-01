@@ -1,20 +1,4 @@
 "vimrc
-set ar
-set autoread
-set autowrite
-set aw
-set cmdheight=2
-set confirm
-set eb
-set et
-set expandtab
-set fo+=mB
-set foldenable
-set history=1000
-set iskeyword+=_,@,#,%,-
-set laststatus=2
-set lbr
-set magic
 set mouse=a
 set number
 set noswapfile
@@ -41,7 +25,6 @@ au BufRead,BufNewFile *.qml set filetype=qml
 
 au filetype lisp source ~/.vim/lisp_config.vim
 au filetype markdown source ~/.vim/markdown.vim
-au filetype html,css,js source ~/.vim/web.vim
 au filetype cpp,c source ~/.vim/c++_config.vim
 au filetype python source ~/.vim/python_config.vim
 au filetype go source ~/.vim/golang.vim
@@ -196,7 +179,6 @@ packadd vim-snippets
 packadd vim-surround
 packadd vimproc.vim
 packadd xmledit
-packadd vim-buffergator
 
 
 set completeopt=longest,menu
@@ -254,6 +236,19 @@ let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '!'
 nmap <C-j> :ALENext<cr>
 nmap <C-k> :ALEPrevious<cr>
+
+
+ 
+" Show icons, icons are shown by default
+let g:Lf_ShowDevIcons = 1
+" For GUI vim, the icon font can be specify like this, for example
+let g:Lf_DevIconsFont = "DroidSansMono Nerd Font Mono"
+" If needs
+set ambiwidth=double
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+
 
 
 
