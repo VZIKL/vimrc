@@ -55,12 +55,6 @@
 [submodule "pack/plugin/opt/vim-multiple-cursors"]
 	path = pack/plugin/opt/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors
-[submodule "pack/plugin/opt/vim-qml"]
-	path = pack/plugin/opt/vim-qml
-	url = https://github.com/peterhoeg/vim-qml
-[submodule "pack/plugin/opt/vim-snipmate"]
-	path = pack/plugin/opt/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate
 [submodule "pack/plugin/opt/vim-snippets"]
 	path = pack/plugin/opt/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -73,9 +67,6 @@
 [submodule "pack/plugin/opt/vimproc.vim"]
 	path = pack/plugin/opt/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim 
-[submodule "pack/plugin/opt/xmledit"]
-	path = pack/plugin/opt/xmledit
-	url = https://github.com/sukima/xmledit
 [submodule "pack/plugin/opt/vim-easy-align"]
 	path = pack/plugin/opt/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
@@ -100,3 +91,6 @@
 [submodule "pack/plugin/opt/vim-monokai-pro"]
 	path = pack/plugin/opt/vim-monokai-pro
 	url = https://github.com/phanviet/vim-monokai-pro
+[submodule "pack/plugin/opt/vim-polyglot"]
+	path = pack/plugin/opt/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
