@@ -28,6 +28,7 @@ au filetype markdown source ~/.vim/markdown.vim
 au filetype cpp,c source ~/.vim/c++_config.vim
 au filetype python source ~/.vim/python_config.vim
 au filetype go source ~/.vim/golang.vim
+au filetype rust source ~/.vim/rust.vim
 
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py,*.lua,*.pl,*.rb exec ":call SetTitle()"
 autocmd BufNewFile * normal G
@@ -173,12 +174,10 @@ packadd vim-easymotion
 packadd vim-easy-align
 packadd vim-fugitive
 packadd vim-multiple-cursors
-packadd vim-qml
-packadd vim-snipmate
 packadd vim-snippets
 packadd vim-surround
 packadd vimproc.vim
-packadd xmledit
+packadd vim-polyglot
 
 
 set completeopt=longest,menu
@@ -257,6 +256,7 @@ let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 syntax on
 
 set background=dark
+set t_Co=256
 set termguicolors
 colorscheme monokai_pro
 

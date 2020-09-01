@@ -94,3 +94,6 @@
 [submodule "pack/plugin/opt/vim-polyglot"]
 	path = pack/plugin/opt/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "pack/plugin/opt/rust.vim"]
+	path = pack/plugin/opt/rust.vim
+	url = https://github.com/rust-lang/rust.vim
