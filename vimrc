@@ -157,9 +157,8 @@ let g:mapleader=','
 "Plugin List
 packadd colorizer
 packadd supertab
-packadd YouCompleteMe
 packadd auto-pairs
-packadd vim-monokai-pro
+packadd vim-polyglot
 packadd nerdcommenter
 packadd rainbow_parentheses.vim
 packadd tlib_vim
@@ -171,34 +170,18 @@ packadd vim-autoclose
 packadd vim-autoformat
 packadd vim-closetag
 packadd vim-easymotion
+packadd any-jump.vim
 packadd vim-easy-align
 packadd vim-fugitive
 packadd vim-multiple-cursors
 packadd vim-snippets
 packadd vim-surround
 packadd vimproc.vim
-packadd vim-polyglot
-
+" packadd vim-colors-solarized
+packadd coc.nvim
 
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-let g:ycm_key_list_select_completion   = ['<C-n>']
-let g:ycm_key_list_previous_completion = ['<C-p>']
-let g:ycm_global_ycm_extra_conf        = '~/.ycm_extra_conf.py'
-
-let g:ycm_key_list_invoke_completion                    = ""
-let g:ycm_confirm_extra_conf                            = 0
-let g:ycm_collect_identifiers_from_tags_files           = 1
-let g:ycm_min_num_of_chars_for_completion               = 2
-let g:ycm_cache_omnifunc                                = 0
-let g:ycm_seed_identifiers_with_syntax                  = 1
-let g:ycm_complete_in_comments                          = 1
-let g:ycm_complete_in_strings                           = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_server_keep_logfiles                          = 1
-let g:ycm_server_log_level                              = 'debug'
-let g:ycm_show_diagnostics_ui                           = 0
 
 
 let g:UltiSnipsExpandTrigger      = "<tab>"
@@ -253,11 +236,9 @@ let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
 
 
-syntax on
+syntax enable
+"set background=light
+"colorscheme solarized
 
-set background=dark
-set t_Co=256
-set termguicolors
-colorscheme monokai_pro
 
 set encoding=utf-8

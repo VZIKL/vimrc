@@ -1,9 +1,6 @@
 [submodule "pack/plugin/opt/MatchTagAlways"]
 	path = pack/plugin/opt/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways
-[submodule "pack/plugin/opt/YouCompleteMe"]
-	path = pack/plugin/opt/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "pack/plugin/opt/auto-pairs"]
 	path = pack/plugin/opt/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
@@ -88,12 +85,18 @@
 [submodule "pack/plugin/opt/colorizer"]
 	path = pack/plugin/opt/colorizer
 	url = https://github.com/lilydjwg/colorizer
-[submodule "pack/plugin/opt/vim-monokai-pro"]
-	path = pack/plugin/opt/vim-monokai-pro
-	url = https://github.com/phanviet/vim-monokai-pro
 [submodule "pack/plugin/opt/vim-polyglot"]
 	path = pack/plugin/opt/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
 [submodule "pack/plugin/opt/rust.vim"]
 	path = pack/plugin/opt/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/plugin/opt/vim-colors-solarized"]
+	path = pack/plugin/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "pack/plugin/opt/coc.nvim"]
+	path = pack/plugin/opt/coc.nvim
+	url = http://github.com/neoclide/coc.nvim
+[submodule "pack/plugin/opt/any-jump.vim"]
+	path = pack/plugin/opt/any-jump.vim
+	url = https://github.com/pechorin/any-jump.vim
