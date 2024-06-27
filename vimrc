@@ -18,7 +18,7 @@ set backspace=2
 filetype plugin indent on
 
 source ~/.vim/ui.vim
-
+source ~/.vim/coc.vim
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 au BufRead,BufNewFile *.qml set filetype=qml
@@ -166,7 +166,7 @@ packadd ultisnips
 packadd ale
 packadd LeaderF
 packadd vim-addon-mw-utils
-packadd vim-autoclose
+"packadd vim-autoclose
 packadd vim-autoformat
 packadd vim-closetag
 packadd vim-easymotion
@@ -216,8 +216,8 @@ xmap ga <Plug>(EasyAlign)
 "ale binding
 let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '!'
-nmap <C-j> :ALENext<cr>
-nmap <C-k> :ALEPrevious<cr>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
  
@@ -240,5 +240,5 @@ syntax enable
 "set background=light
 "colorscheme solarized
 
-
 set encoding=utf-8
+set fileencoding=utf-8

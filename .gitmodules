@@ -58,9 +58,6 @@
 [submodule "pack/plugin/opt/vim-surround"]
 	path = pack/plugin/opt/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "pack/plugin/opt/vim-yapf"]
-	path = pack/plugin/opt/vim-yapf
-	url = https://github.com/mindriot101/vim-yapf
 [submodule "pack/plugin/opt/vimproc.vim"]
 	path = pack/plugin/opt/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim 
